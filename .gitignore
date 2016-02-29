@@ -1,0 +1,7 @@
+#
+*.dll
+Code/packages
+Code/Web/bin
+Code/Web/obj
+*.user
+Code/.vs
