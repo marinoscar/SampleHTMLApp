@@ -1,8 +1,8 @@
 ﻿var mainData = {
     engines: [
         {
-            code: "ENGINE-01", name: "V2500 Engine", picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg",
-            features: ["feature 1", "feature 2", "feature 3"],
+            code: "ENGINE-01", name: "V2500 ENGINE", picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg",
+            features: [{ name: "feature 1" }, { name: "feature 2" }, { name: "feature 3" }],
             variables: [
                 { name: "vibration", target: 50 },
                 { name: "flight hours", target: 500 },
@@ -16,7 +16,7 @@
         },
         {
             code: "ENGINE-02", name: "GP7200 ENGINE", picture: "http://www.pw.utc.com/Content/GP7200_Engine/img/_GP7200engine.jpg",
-            features: ["feature 1", "feature 2", "feature 3"],
+            features: [{ name: "feature 1" }, { name: "feature 2" }, { name: "feature 3" }],
             variables: [
                 { name: "vibration", target: 50 },
                 { name: "flight hours", target: 500 },
@@ -30,7 +30,7 @@
         },
         {
             code: "ENGINE-03", name: "PW4000-94 ENGINE", picture: "http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg",
-            features: ["feature 1", "feature 2", "feature 3"],
+            features: [{ name: "feature 1" }, { name: "feature 2" }, { name: "feature 3" }],
             variables: [
                 { name: "vibration", target: 50 },
                 { name: "flight hours", target: 500 },

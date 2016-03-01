@@ -1,29 +1,14 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Application</title>
+    <title></title>
     <meta charset="utf-8" />
-    <link href="Content/Styles/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/FontAwesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="Content/Styles/style.css" rel="stylesheet" />
-
-    <script src="Content/Scripts/jquery.js"></script>
-    <script src="Content/Scripts/bootstrap.min.js"></script>
-    <script src="Content/Scripts/handlebars.min.js"></script>
-    <script src="Content/Scripts/jsondata.js"></script>
-    <script src="Content/Scripts/sampleApp.js"></script>
-    
 </head>
 <body>
+
     <header id="topnav">
         <div class="container">
-            <!-- Logo container-->
-
             <a href="http://coderthemes.com/minton_1.3/purple_hori/index.html"><img src="Content/Images/PrattWhitney.jpg" alt="user"></a>
-
-            <!-- End Logo container-->
-
-
             <ul class="nav navbar-nav navbar-right pull-right">
                 <li class="dropdown user-menu-position">
                     <img src="Content/Images/avatar-1.jpg" class="md dropdown-toggle img-circle user-img" data-toggle="dropdown" alt="user">
@@ -34,24 +19,8 @@
                         <li><a href="#">Logout</a></li>
                     </ul>
                 </li>
-                <!--<li class="dropdown user-menu-position">
-                    <img src="Content/Images/avatar-1.jpg" class="md circle-container user-img" alt="user">
-
-
-                    <ul class="md dropdown-menu" style="z-index:100">
-                        <li class="kopie"><a href="#">Profile</a></li>
-                        <li class="kopie"><a href="#">Settings</a></li>
-                        <li class="kopie"><a href="#">Lock screen</a></li>
-                        <li class="kopie"><a href="#">Logout</a></li>
-                    </ul>
-                </li>-->
             </ul>
-
-
-
-
         </div>
-
         <div id="navbar" style="height:30px; ">
             <nav class="navbar navbar-default" role="navigation">
                 <div class="navbar-header">
@@ -63,15 +32,11 @@
                     </button>
                     <a class="navbar-brand" href="#">Home</a>
                 </div>
-
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Menu 1</a></li>
-
-
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 2 <b class="caret"></b></a>
-
                             <ul class="dropdown-menu">
                                 <li class="kopie"><a href="#">Sub menu 1</a></li>
                                 <li class="kopie"><a href="#">Sub menu 1</a></li>
@@ -86,7 +51,6 @@
                                 <li><a href="#">Menu 3 Link 1</a></li>
                                 <li><a href="#">Menu 3 Link 2</a></li>
                                 <li><a href="#">Menu 3 Link 3</a></li>
-
                                 <li class="dropdown dropdown-submenu">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 3 Link 4</a>
                                     <ul class="dropdown-menu">
@@ -95,71 +59,117 @@
                                         <li><a href="#">Menu 3 Submenu Link 4.2</a></li>
                                         <li><a href="#">Menu 3 Submenu Link 4.3</a></li>
                                         <li><a href="#">Menu 3 Submenu Link 4.4</a></li>
-
                                     </ul>
                                 </li>
-
                             </ul>
                         </li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
             </nav>
         </div>
     </header>
     <div class="wrapper">
         <div class="container ">
-
             <div class="row">
                 <div class="col-sm-12">
                     <h4><span>Welcome Bill</span></h4>
                 </div>
             </div>
             <div class="row">
-                <div class=" col-sm-12 col-lg-12">
-                    <div class="container-fluid card-box">
-                        <div id="EnginesContainer">
-
-                        </div>
-
+                <div class="container-fluid card-box">
+                    <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>
+                    <div class="col-sm-12 col-lg-12">
+                        <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">PARTS & SERVICES </div>
+                        <br />
+                    </div>
+                    <div id="OrdersContainer" class="col-sm-12 col-lg-12"></div>
+                    <div class="col-sm-12 col-lg-12">
+                        <ul class="nav nav-pills nav-stacked">
+                            <li role="presentation" class="active"><a href="#">Accessories</a></li>
+                            <li role="presentation"><a href="#">Get a Quote</a></li>
+                            <li role="presentation"><a href="#">Estimate a Payment</a></li>
+                            <li role="presentation"><a href="#">Download Brochure</a></li>
+                        </ul>
+                        <br />
+                        <br />
+                        <button type="button" class="btn btn-primary btn-block">Order Now</button>
                     </div>
                 </div>
             </div>
-        </div> <!-- end container -->
+
+
+        </div>
     </div>
-    
+
+    <link href="Content/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/FontAwesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/Styles/style.css" rel="stylesheet" />
+
+    <script src="Content/Scripts/jquery.js"></script>
+    <script src="Content/Scripts/bootstrap.min.js"></script>
+    <script src="Content/Scripts/handlebars.min.js"></script>
+    <script src="Content/Scripts/underscore-min.js"></script>
+    <script src="Content/Scripts/jsondata.js"></script>
+    <script src="Content/Scripts/sampleApp.js"></script>
 
     <script id="engines-template" type="text/x-handlebars-template">
-       
-            {{#each engines}}
 
-            <div class="row">
-                <div class="col-lg-6" style="padding-bottom:15px">
-                    <span class="text-bold-title">My Pratt & Whitney Engine & Parts – {{name}}</span>
-                </div>
+        {{#each engines}}
+
+        <div class="row">
+            <div class="col-lg-6" style="padding-bottom:15px">
+
+                <span class="text-bold-title">My Pratt & Whitney Engine & Parts – {{name}}</span>
             </div>
-            <div class="row">
-                <div class="col-md-1 ">
-                    <a onclick="OnclickEngine('{{code}}')"><img src="{{picture}}" class="engine-picture-sm text-center " alt="engine-{{code}}"></a>
-                    <br />
-                    <br />
-                </div>
-                <div class="col-md-2">
-                    <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
-                    <br />
-                    <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
-                    <br />
-                    <ul>
-                        {{#each features}}
-                        <li>{{name}}</li>
-                        {{/each}}
-                    </ul>
-                </div>
-
+        </div>
+        <div class="row">
+            <div class="col-md-2 text-center ">
+                <img src="{{picture}}" class="engine-picture img-responsive "   alt="engine-{{code}}">
+                <br />
             </div>
-
-            {{/each}}
+            <div class="col-md-2">
+                <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
+                <br />
+                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
+                <br />
+                <ul>
+                    {{#each features}}
+                    <li>{{name}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <br />
+        </div>
         
+        {{/each}}
+
     </script>
-    
+    <script id="orders-template" type="text/x-handlebars-template">
+        <!--<div class="container-fluid ">-->
+        {{#each engines}}
+        
+        <div class="col-sm-12 col-lg-12">
+
+            <div class="col-lg-12" style="padding-bottom:15px; padding-left:0">
+                <span class="text-bold-title text-center">{{name}} Parts</span>
+            </div>
+            <br />
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="row">
+                {{#each parts}}
+                <div class="col-lg-2" style="padding-bottom:15px">
+                    <div class="text-bold-sm-title text-center text-nowrap">{{name}}</div>
+                    <img src="{{picture}}" class="engine-picture-md img-responsive center-block" alt="part-{{code}}">
+                    <div class="text-center">{{description}}</div>
+                    <br />
+                </div>
+               
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+        <!--</div>-->
+    </script>
 </body>
 </html>

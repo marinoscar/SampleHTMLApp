@@ -83,11 +83,20 @@
   <ItemGroup>
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Images\avatar-1.jpg" />
+    <Content Include="Content\Images\PrattWhitney.jpg" />
     <Content Include="Content\Scripts\bootstrap.min.js" />
     <Content Include="Content\Scripts\jquery.js" />
+    <Content Include="Content\Scripts\jsondata.js" />
+    <Content Include="Content\Scripts\sampleApp.js" />
+    <Content Include="Content\Scripts\underscore-min.js" />
     <Content Include="Content\Styles\bootstrap.min.css" />
+    <Content Include="Content\Styles\style1 - Copy.css" />
+    <Content Include="Content\Styles\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
+    <Content Include="Content\Scripts\handlebars.min.js" />
+    <Content Include="orders.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -105,6 +114,8 @@
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\FontAwesome\fonts\FontAwesome.otf" />
+    <Content Include="App_Readme\Handlebarsjs_README.md" />
+    <Content Include="App_Readme\Handlebarsjs_LICENSE" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
