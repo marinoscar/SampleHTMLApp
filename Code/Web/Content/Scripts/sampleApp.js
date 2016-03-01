@@ -24,6 +24,9 @@ $(function () {
         case 'reviewAccident':
             DisplayReviewAccident();
             break;
+        case 'repairs':
+            DisplayReviewAccident();
+            break;
         default:
             DisplayEnginesTemplate(mainData)
             break;
