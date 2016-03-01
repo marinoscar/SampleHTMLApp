@@ -96,6 +96,7 @@
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Content\Scripts\handlebars.min.js" />
+    <Content Include="ordersStatus.html" />
     <Content Include="orders.html" />
     <Content Include="Web.config" />
   </ItemGroup>

@@ -9,7 +9,7 @@
                 { name: "EGTM", target: 200 },
             ],
             parts: [
-                { code: "PART-01", name: "Part Name", description: "part description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" },
+                { code: "PART-01", name: "Part Name", description: "part description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg",  },
                 { code: "PART-02", name: "Part Name", description: "part description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" },
                 { code: "PART-03", name: "Part Name", description: "part description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" }
             ]
@@ -42,5 +42,34 @@
                 { code: "PART-03", name: "Part Name", description: "part description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" }
             ]
         }
+    ]
+};
+
+var ordersData = {
+    orders: [
+        {
+            number: "001", engineCode: "ENGINE-01", engineName: "V2500 ENGINE",
+            parts: [
+                { code: "PART-01",name: "Part Name", status: "SHIPPED", deliveryDate: 'XX-XX-XX' },
+                { code: "PART-02", name: "Part Name", status: "ON BACKORDER", deliveryDate: 'XX-XX-XX' },
+                { code: "PART-03", name: "Part Name", status: "IN PROGRESS", deliveryDate: 'XX-XX-XX' },
+            ]
+        },
+        {
+            number: "002", engineCode: "ENGINE-02", engineName: "GP7200 ENGINE",
+            parts: [
+                { code: "PART-01", name: "Part Name", status: "SHIPPED", deliveryDate: 'XX-XX-XX' },
+                { code: "PART-02", name: "Part Name", status: "ON BACKORDER", deliveryDate: 'XX-XX-XX' },
+                { code: "PART-03", name: "Part Name", status: "IN PROGRESS", deliveryDate: 'XX-XX-XX' },
+            ]
+        },
+        {
+            number: "003", engineCode: "ENGINE-03", engineName: "PW4000-94 ENGINE",
+            parts: [
+                { code: "PART-01", name: "Part Name", status: "SHIPPED", deliveryDate: 'xx-xx-xx' },
+                { code: "PART-02", name: "Part Name", status: "ON BACKORDER", deliveryDate: 'xx-xx-xx' },
+                { code: "PART-03", name: "Part Name", status: "IN PROGRESS", deliveryDate: 'xx-xx-xx' },
+            ]
+        },
     ]
 };
