@@ -72,50 +72,32 @@
         <div class="container ">
             <div class="row">
                 <div class="col-sm-12">
-                    <h4><span>Order Status</span></h4>
+                    <h4><span>CUSTOMER’S P&W ENGINE</span></h4>
                 </div>
             </div>
             <div class="row">
                 <div class="container-fluid card-box">
-
                     <div class="row">
-
-                        <div class="col-lg-6" style="padding-bottom:15px">
-                            <div class="text-bold-title">TRACK MY ORDER</div>
+                        <div class="col-sm-6 col-lg-6">
+                            <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>
+                            <div class="col-sm-12 col-lg-12">
+                                <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">MAINTENANCE HISTORY</div>
+                                <br />
+                            </div>
+                            <div id="HistoryContainer" class="col-sm-12 col-lg-12"></div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6" style="padding-bottom:15px">
-                            <div id="OrderNumber" class="text-bold-title"></div>
+                        <div class="col-sm-6 col-lg-6">
+                            <div class="text-bold-title">OVERALL ENGINE HEALTH</div>
+                            <br />
+                            <div id="VariablesContainer" class="col-sm-12 col-lg-12"></div>
+                        </div>
+                        <div class="col-sm-12 col-lg-12">
+                            <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">RECOMMENDEDED NEXT STEPS / KEY MILESTONES</div>
+                            <br />
+                            <div>XXX</div>
                             <br />
                         </div>
                     </div>
-                    <div class="row">
-
-                        <div class="col-lg-6" style="padding-bottom:15px">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-primary" style="width: 10%">
-                                    <span>Order Placed</span>
-                                </div>
-                                <div class="progress-bar progress-bar-info " style="width: 20%">
-                                    <span>On Backorder</span>
-                                </div>
-                                <div class="progress-bar progress-bar-danger" style="width: 35%">
-                                    <span>In Progress</span>
-                                </div>
-                                <div class="progress-bar progress-bar-warning" style="width: 15%">
-                                    <span>Shipped</span>
-                                </div>
-                                <div class="progress-bar progress-bar-success" style="width: 20%">
-                                    <span>Delivered</span>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div id="PartsContainer" class=" col-sm-12 col-lg-12"></div>
-
                 </div>
             </div>
 
@@ -136,26 +118,51 @@
 
     <script id="engines-template" type="text/x-handlebars-template">
 
-        {{#each orders}}
+        {{#each engines}}
 
         <div class="row">
+            <div class="col-lg-6" style="padding-bottom:15px">
 
-            <div class="col-lg-6" style="padding-bottom:15px">               
-                <div class="text-bold-title">{{engineName}} Parts</div>
+                <span class="text-bold-title">P&W ENGINE</span>
             </div>
         </div>
-        {{#each parts}}
         <div class="row">
-            <div class="col-md-1  ">
-                <div class="text-bold-sm-title  text-nowrap">{{name}}</div>
-                <img src="{{picture}}" class="engine-picture-sm img-responsive " alt="part-{{code}}">
-                <div class="text-center">{{description}}</div>
+            <div class="col-md-4 text-center ">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-2 ">
-                <span class="text-bold-sm-title text-nowrap text-capitalize">STATUS: </span><span class="text-nowrap ">{{status}}</span>
+            <div class="col-md-2">
+                <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
-                <span class="text-bold-sm-title text-nowrap text-capitalize">ESTIMATED DELIVERY DATE: </span><span class="text-nowrap">{{deliveryDate}}</span>
+                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
+                <br />
+                <ul>
+                    {{#each features}}
+                    <li>{{name}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <br />
+        </div>
+
+
+        {{/each}}
+
+    </script>
+
+    <script id="history-template" type="text/x-handlebars-template">
+
+        {{#each engines}}
+
+
+        {{#each history}}
+        <div class="row">
+            <div class="col-md-3 text-center ">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
+
+            </div>
+            <div class="col-md-1">
+                <span class="text-bold-sm-title text-nowrap text-capitalize">{{detail}}</span>
                 <br />
             </div>
             <br />
@@ -166,5 +173,61 @@
 
     </script>
 
+    <script id="variables-template" type="text/x-handlebars-template">
+        {{#each engines}}
+        <table class="table">
+            <tr>
+                <td></td>
+                <td class="text-bold-title text-center">YOUR SCORE</td>
+                <td class="text-bold-title text-center">P&W STANDARD</td>
+                <td class="text-bold-title text-center">RATING</td>
+            </tr>
+            {{#each variables}}
+            <tr>
+                <td class="text-bold-title ">{{name}}</td>
+                <td class="text-center">{{score}}</td>
+                <td class="text-center">{{target}}</td>
+                <td>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:{{rating}}%">
+                            
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            {{/each}}
+        </table>        
+
+        
+        {{/each}}
+
+    </script>
+    <script id="orders-template" type="text/x-handlebars-template">
+        <!--<div class="container-fluid ">-->
+        {{#each engines}}
+
+        <div class="col-sm-12 col-lg-12">
+
+            <div class="col-lg-12" style="padding-bottom:15px; padding-left:0">
+                <span class="text-bold-title text-center">{{name}} Parts</span>
+            </div>
+            <br />
+        </div>
+        <div class="col-sm-12 col-lg-12">
+            <div class="row">
+                {{#each parts}}
+                <div class="col-lg-2" style="padding-bottom:15px">
+                    <div class="text-bold-sm-title text-center text-nowrap">{{name}}</div>
+                    <img src="{{picture}}" class="engine-picture-md img-responsive center-block" alt="part-{{code}}">
+                    <div class="text-center">{{description}}</div>
+                    <br />
+                </div>
+
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+        <!--</div>-->
+    </script>
 </body>
 </html>

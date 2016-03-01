@@ -91,11 +91,11 @@
     <Content Include="Content\Scripts\sampleApp.js" />
     <Content Include="Content\Scripts\underscore-min.js" />
     <Content Include="Content\Styles\bootstrap.min.css" />
-    <Content Include="Content\Styles\style1 - Copy.css" />
     <Content Include="Content\Styles\style.css" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Content\Scripts\handlebars.min.js" />
+    <Content Include="fieldService.html" />
     <Content Include="ordersStatus.html" />
     <Content Include="orders.html" />
     <Content Include="Web.config" />

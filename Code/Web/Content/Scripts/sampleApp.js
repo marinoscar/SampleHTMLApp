@@ -14,6 +14,9 @@ $(function () {
             var orderNumber = GetParameterByName('number');
             DisplayOrderStatus(orderNumber);
             break;
+        case 'fieldService':
+            DisplayHistory();
+            break;
         default:
             DisplayEnginesTemplate(mainData)
             break;
@@ -38,8 +41,11 @@ function GetParameterByName (name) {
 function OnclickEngine(code)
 {
     window.location.href = "/orders.html?view=orders&code=" + code;
-    selectedEngine = code;
-    DisplayOrders(selectedEngine);
+    
+}
+function OnclickOrderNow(code) {
+    window.location.href = "/ordersStatus.html?view=orderStatus&number=" + code;
+   
 }
 function DisplayEnginesTemplate(data) {
     
@@ -115,4 +121,24 @@ function DisplayOrderStatusTemplate(data) {
   
     $('#PartsContainer').empty();
     $('#PartsContainer').append(html);
+}
+
+function DisplayHistory() {
+    var first = _.first(mainData.engines);
+    var filteredJson = { engines: [first] };
+    DisplayEnginesTemplate(filteredJson);
+    var source = $("#history-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(filteredJson);
+
+    $('#HistoryContainer').empty();
+    $('#HistoryContainer').append(html);
+
+    var source = $("#variables-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(filteredJson);
+
+    $('#VariablesContainer').empty();
+    $('#VariablesContainer').append(html);
+
 }
