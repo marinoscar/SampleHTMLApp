@@ -134,6 +134,16 @@
                     {{#each features}}
                     <li>{{name}}</li>
                     {{/each}}
+                    {{#if OtherSpecifications.length}}
+                    <li>
+                        Other Specifications
+                        <ul>
+                            {{#each OtherSpecifications}}
+                            <li>{{name}}</li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/if}}
                 </ul>
             </div>
             <br />

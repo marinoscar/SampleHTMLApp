@@ -110,12 +110,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-1 ">
+                <div class="col-lg-1">
                     <a onclick="OnclickEngine('{{code}}')"><img src="{{picture}}" class="engine-picture-sm text-center " alt="engine-{{code}}"></a>
                     <br />
                     <br />
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-5">
                     <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                     <br />
                     <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
@@ -124,6 +124,16 @@
                         {{#each features}}
                         <li>{{name}}</li>
                         {{/each}}
+                        {{#if OtherSpecifications.length}}
+                        <li>
+                            Other Specifications
+                            <ul>
+                                {{#each OtherSpecifications}}
+                                <li>{{name}}</li>
+                                {{/each}}
+                            </ul>
+                        </li>
+                        {{/if}}
                     </ul>
                 </div>
 
