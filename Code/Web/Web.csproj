@@ -81,6 +81,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.css" />
+    <Content Include="Content\bootstrap-fileinput\css\fileinput.min.css" />
+    <Content Include="Content\bootstrap-fileinput\img\loading-sm.gif" />
+    <Content Include="Content\bootstrap-fileinput\img\loading.gif" />
+    <Content Include="Content\Scripts\plugins\canvas-to-blob.js" />
+    <Content Include="Content\Scripts\plugins\canvas-to-blob.min.js" />
+    <Content Include="Content\Styles\fileinput.min.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="repairs.html" />
+    <Content Include="reviewAccident.html" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
     <Content Include="Content\FontAwesome\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\avatar-1.jpg" />
@@ -92,12 +102,17 @@
     <Content Include="Content\Scripts\underscore-min.js" />
     <Content Include="Content\Styles\bootstrap.min.css" />
     <Content Include="Content\Styles\style.css" />
+    <Content Include="accidents.html" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Content\Scripts\handlebars.min.js" />
     <Content Include="fieldService.html" />
     <Content Include="ordersStatus.html" />
     <Content Include="orders.html" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Scripts\fileinput.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +132,7 @@
     <Content Include="Content\FontAwesome\fonts\FontAwesome.otf" />
     <Content Include="App_Readme\Handlebarsjs_README.md" />
     <Content Include="App_Readme\Handlebarsjs_LICENSE" />
+    <None Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

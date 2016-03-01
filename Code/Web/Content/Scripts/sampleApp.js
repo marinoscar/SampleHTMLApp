@@ -1,5 +1,6 @@
 ﻿var selectedEngine ;
 $(function () {
+   
 
     var currentView=GetParameterByName('view');
     switch (currentView) {
@@ -16,6 +17,12 @@ $(function () {
             break;
         case 'fieldService':
             DisplayHistory();
+            break;       
+        case 'addAccident':
+            DisplayDocumentAccident();
+            break;
+        case 'reviewAccident':
+            DisplayReviewAccident();
             break;
         default:
             DisplayEnginesTemplate(mainData)
@@ -140,5 +147,37 @@ function DisplayHistory() {
 
     $('#VariablesContainer').empty();
     $('#VariablesContainer').append(html);
+
+}
+
+function DisplayDocumentAccident() {
+    $("#input-24").fileinput({
+        initialPreview: [
+            '<img src="http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg">',
+            '<img src="http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg">'
+        ],
+       
+        overwriteInitial: false,
+        resizeImage: true,
+        maxImageWidth: 20,
+        maxImageHeight: 20,
+        resizePreference: 'width'
+        
+    });
+
+    var first = _.first(mainData.engines);
+    var filteredJson = { engines: [first] };
+    DisplayEnginesTemplate(filteredJson);
+    
+
+}
+
+function DisplayReviewAccident() {
+    
+
+    var first = _.first(mainData.engines);
+    var filteredJson = { engines: [first] };
+    DisplayEnginesTemplate(filteredJson);
+
 
 }

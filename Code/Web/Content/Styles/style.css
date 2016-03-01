@@ -188,3 +188,12 @@
     vertical-align: middle;
     float: none;
 }
+.add-photo-container{
+    width:130px;
+    height:130px;
+    border:solid 1px darkgray;
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    font-weight:bold;
+}
