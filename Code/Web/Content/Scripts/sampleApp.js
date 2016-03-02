@@ -161,11 +161,12 @@ function DisplayHistory() {
 function DisplayDocumentAccident() {
     $("#input-24").fileinput({
         initialPreview: [
-            '<img src="http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg">',
-            '<img src="http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg">'
+            '<img src="Content/Images/AOG01.jpg">',
+            '<img src="Content/Images/sv.PNG">',
+            '<img src="Content/Images/bv.PNG">'
         ],
        
-        overwriteInitial: false,
+        overwriteInitial: true,
         resizeImage: true,
         maxImageWidth: 20,
         maxImageHeight: 20,

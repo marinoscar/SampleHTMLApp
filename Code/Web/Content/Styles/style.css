@@ -189,8 +189,8 @@
     float: none;
 }
 .add-photo-container{
-    width:130px;
-    height:130px;
+    width:270px;
+    height:187px;
     border:solid 1px darkgray;
     display: table-cell;
     vertical-align: middle;

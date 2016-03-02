@@ -36,29 +36,16 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/FieldService.html?view=fieldService">Field Service Rep</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accidents<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidents<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li class="kopie"><a href="/accidents.html?view=addAccident">Document an Accident</a></li>
-                                <li class="kopie"><a href="/reviewAccident.html?view=reviewAccident">Accident Review</a></li>
+                                <li class="kopie"><a href="/accidents.html?view=addAccident">Document an Incident</a></li>
+                                <li class="kopie"><a href="/reviewAccident.html?view=reviewAccident">Incident Review</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">Repairs<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repairs<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li class="kopie"><a href="/repairs.html?view=repairs">My Repairs</a></li>
-                                <li><a href="#">Menu 3 Link 1</a></li>
-                                <li><a href="#">Menu 3 Link 2</a></li>
-                                <li><a href="#">Menu 3 Link 3</a></li>
-                                <li class="dropdown dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 3 Link 4</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="kopie"><a href="#">Menu 3 Link 4</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.1</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.2</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.3</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.4</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -79,13 +66,13 @@
 
                         <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>
                         <div class="col-sm-12 col-lg-12">
-                            <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">ACCIDENT DETAILS</div>
+                            <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">INCIDENT DETAILS</div>
                             <br />
                         </div>
                         <div class="col-sm-12 col-lg-12">
                             <div class="row">
                                 <div class="col-sm-1 col-lg-1">
-                                    <div class="text-bold-sm-title text-nowrap">Accident Type:</div>
+                                    <div class="text-bold-sm-title text-nowrap">Incident Type:</div>
                                 </div>
                                 <div class="dropdown col-sm-2 col-lg-2">
                                     <button class="btn btn-default dropdown-toggle"  type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -103,7 +90,7 @@
                             <br />
                             <div class="row">
                                 <div class="col-sm-1 col-lg-1">
-                                    <div class="text-bold-sm-title text-nowrap">Accident Location:</div>
+                                    <div class="text-bold-sm-title text-nowrap">Incident Location:</div>
                                 </div>
                                 <div class="dropdown col-sm-2 col-lg-2">
                                     <input type="text" class="form-control" placeholder="Location" aria-describedby="basic-addon1">
@@ -116,16 +103,16 @@
                             <div class="panel panel-default panel-heading panel-title page-division">PHOTOS</div>
                             <br />
                             <!--<div class="row">
-                                <div class="col-sm-1 col-lg-1">
-                                    <div class="add-photo-container"> ADD A PHOTO</div>
+                                <div class="col-sm-1 col-lg-2">
+                                    <div class="add-photo-container"> ADD A PHOTO FRONT VIEW</div>
                                     <br />
                                 </div>
-                                <div class="col-sm-1 col-lg-1">
-                                    <div class="add-photo-container"> ADD A PHOTO</div>
+                                <div class="col-sm-1 col-lg-2">
+                                    <div class="add-photo-container"> ADD A PHOTO SIDE VIEW</div>
                                     <br />
                                 </div>
-                                <div class="col-sm-1 col-lg-1">
-                                    <div class="add-photo-container"> ADD A PHOTO </div>
+                                <div class="col-sm-1 col-lg-2">
+                                    <div class="add-photo-container"> ADD A PHOTO BACK VIEW </div>
                                     <br />
                                 </div>
 
@@ -176,10 +163,10 @@
         </div>
         <div class="row">
             <div class="col-md-2 text-center ">
-                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
+                <img  src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-2">
+            <div class="col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
                 <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>

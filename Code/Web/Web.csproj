@@ -85,6 +85,10 @@
     <Content Include="Content\bootstrap-fileinput\css\fileinput.min.css" />
     <Content Include="Content\bootstrap-fileinput\img\loading-sm.gif" />
     <Content Include="Content\bootstrap-fileinput\img\loading.gif" />
+    <Content Include="Content\Images\AOG01.jpg" />
+    <Content Include="Content\Images\bv.PNG" />
+    <Content Include="Content\Images\fv.PNG" />
+    <Content Include="Content\Images\sv.PNG" />
     <Content Include="Content\Scripts\adapters\standalone-framework.js" />
     <Content Include="Content\Scripts\adapters\standalone-framework.src.js" />
     <Content Include="Content\Scripts\charts.js" />

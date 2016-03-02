@@ -21,7 +21,7 @@
             <a href="/Index.html"><img src="Content/Images/PrattWhitney.jpg" alt="user"></a>
             <ul class="nav navbar-nav navbar-right pull-right">
                 <li class="dropdown user-menu-position">
-                    <img src="Content/Images/avatar-1.jpg" class="md dropdown-toggle img-circle user-img" data-toggle="dropdown" alt="user">
+                    <span class="text-bold-sm-title text-nowrap" style="padding-right:5px">Welcome Bill </span><img src="Content/Images/avatar-1.jpg" class="md dropdown-toggle img-circle user-img" data-toggle="dropdown" alt="user">
                     <ul class="dropdown-menu">
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Settings</a></li>
@@ -48,29 +48,16 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="/FieldService.html?view=fieldService">Field Service Rep</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accidents<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidents<b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li class="kopie"><a href="/accidents.html?view=addAccident">Document an Accident</a></li>
-                                <li class="kopie"><a href="/reviewAccident.html?view=reviewAccident">Accident Review</a></li>
+                                <li class="kopie"><a href="/accidents.html?view=addAccident">Document an Incident</a></li>
+                                <li class="kopie"><a href="/reviewAccident.html?view=reviewAccident">Incident Review</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">Repairs<b class="caret"></b></a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repairs<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li class="kopie"><a href="/repairs.html?view=repairs">My Repairs</a></li>
-                                <li><a href="#">Menu 3 Link 1</a></li>
-                                <li><a href="#">Menu 3 Link 2</a></li>
-                                <li><a href="#">Menu 3 Link 3</a></li>
-                                <li class="dropdown dropdown-submenu">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu 3 Link 4</a>
-                                    <ul class="dropdown-menu">
-                                        <li class="kopie"><a href="#">Menu 3 Link 4</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.1</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.2</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.3</a></li>
-                                        <li><a href="#">Menu 3 Submenu Link 4.4</a></li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -83,7 +70,7 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <h4><span>Welcome Bill</span></h4>
+                    <h4><span>MY ACCOUNT</span></h4>
                 </div>
             </div>
             <div class="row">
@@ -110,8 +97,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-1">
-                    <a onclick="OnclickEngine('{{code}}')"><img src="{{picture}}" class="engine-picture-sm text-center " alt="engine-{{code}}"></a>
+                <div class="col-lg-2">
+                    <a onclick="OnclickEngine('{{code}}')"><img src="{{picture}}" class="engine-picture text-center " alt="engine-{{code}}"></a>
                     <br />
                     <br />
                 </div>
