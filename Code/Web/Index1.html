@@ -9,13 +9,15 @@
 
     <script src="Content/Scripts/jquery.js"></script>
     <script src="Content/Scripts/bootstrap.min.js"></script>
+    <script src="Content/Scripts/handlebars.min.js"></script>
+    <script src="Content/Scripts/jsondata.js"></script>
     <script src="Content/Scripts/sampleApp.js"></script>
-
+    
 </head>
 <body>
     <header id="topnav">
         <div class="container">
-
+           
             <a href="/Index.html"><img src="Content/Images/PrattWhitney.jpg" alt="user"></a>
             <ul class="nav navbar-nav navbar-right pull-right">
                 <li class="dropdown user-menu-position">
@@ -26,7 +28,7 @@
                         <li><a href="#">Lock screen</a></li>
                         <li><a href="#">Logout</a></li>
                     </ul>
-                </li>
+                </li>                
             </ul>
         </div>
 
@@ -39,12 +41,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a  class="active navbar-brand" href="/Index2.html">Home</a>
+                    <a class="navbar-brand" href="/Index.html">Home</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="/Index.html">Order Tracking</a></li>
+                        <li><a href="/Index1.html">Order Tracking</a></li>
                         <li><a href="/FieldService.html?view=fieldService">Field Service App</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidents<b class="caret"></b></a>
@@ -64,42 +66,60 @@
 
             <div class="row">
                 <div class="col-sm-12">
-                    <h4><span>ACCOUNT</span></h4>
+                    <h4><span>Order Tracking</span></h4>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-lg-6">
-                    <div class="text-center card-box">
-                        <h3 ><a href="/Index.html" >Order Tracking</a></h3>
-                        <!--<p class="text-muted text-nowrap">Order Tracking</p>-->
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-6">
-                    <div class="text-center card-box">
-                        <h3><a href="/FieldService.html?view=fieldService">Field Service App</a></h3>
-                        <!--<p class="text-muted text-nowrap">Field Service App</p>-->
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-6">
-                    <div class="text-center card-box">
-                        <h3><a href="/accidents.html?view=addAccident">Incident</a></h3>
-                        <!--<p class="text-muted text-nowrap">Aircraft on the Ground (AOG)</p>-->
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-6">
-                    <div class="text-center card-box">
-                        <h3><a href="/repairs.html?view=repairs">Repair</a></h3>
-                        <p class="text-muted text-nowrap"><!--Engine currently be serviced in a P&W Facility--></p>
+                <div class=" col-sm-12 col-lg-12">
+                    <div class="container-fluid card-box">
+                        <div id="EnginesContainer">
+
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div> <!-- end container -->
     </div>
+    
 
+    <script id="engines-template" type="text/x-handlebars-template">
+       
+            {{#each engines}}
 
+            <div class="row">
+                <div class="col-lg-6" style="padding-bottom:15px">
+                    <span class="text-bold-title">Pratt & Whitney Engine & Parts – {{name}}</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                    <a onclick="OnclickEngine('{{code}}')"><img src="{{picture}}" class="engine-picture text-center " alt="engine-{{code}}"></a>
+                    <br />
+                    <br />
+                </div>
+                <div class="col-md-5">
+                    <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>                    
+                    <br />
+                    <ul>
+                        <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
+                        {{#each features}}
+                        <li><em >{{name}}</em></li>
+                        {{/each}}
+                        {{#if OtherSpecifications.length}}
+                        <li><span class="text-bold-sm-title text-nowrap">Other Specifications:</span></li>
+                        {{#each OtherSpecifications}}
+                            <li><em>{{name}}</em></li>
+                            {{/each}}
+                        {{/if}}
+                    </ul>
+                </div>
 
+            </div>
 
+            {{/each}}
+        
+    </script>
+    
 </body>
 </html>

@@ -11,8 +11,8 @@
                 { name: "Vibration Sensor Data", target: 200, score: 200, rating: 85}
             ],
             parts: [
-                { code: "PART-01", name: "Fan Blade", description: "Description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg",  },
-                { code: "PART-02", name: "Compresor Blade", description: "Description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" }
+                { code: "PART-01", name: "Fan Blade", description: "Description", picture: "Content/Images/FanBlade.jpg", },
+                { code: "PART-02", name: "Compresor Blade", description: "Description", picture: "Content/Images/blade.jpg" }
             ],
             history: [
                 { code: "Detail-01", detail: "3/16: Engine Overhaul", picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg", },
@@ -20,7 +20,7 @@
             ]
         },
         {
-            code: "ENGINE-02", name: "PW4000 ENGINE", picture: "http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg",
+            code: "ENGINE-02", name: "PW4000 ENGINE", picture: "/Content/Images/PW400.jpg",
             features: [{ name: "Fan tip diameter: 78.5 in Length" }, { name: "Flange to flange: 141.4 in" }, { name: "Takeoff thrust: 37,250–43,000 lb" }, { name: "Flat rated temperature: 87°F" }, { name: "Bypass ratio: 6.0" }, { name: "Overall pressure ratio: 27.6–31.2" }, { name: "Fan pressure ratio: 1.74" }],
             variables: [
                 { name: "Cycles", target: 50, score: 43, rating: 35 },

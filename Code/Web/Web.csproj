@@ -86,8 +86,11 @@
     <Content Include="Content\bootstrap-fileinput\img\loading-sm.gif" />
     <Content Include="Content\bootstrap-fileinput\img\loading.gif" />
     <Content Include="Content\Images\AOG01.jpg" />
+    <Content Include="Content\Images\blade.jpg" />
     <Content Include="Content\Images\bv.PNG" />
+    <Content Include="Content\Images\FanBlade.jpg" />
     <Content Include="Content\Images\fv.PNG" />
+    <Content Include="Content\Images\PW400.jpg" />
     <Content Include="Content\Images\sv.PNG" />
     <Content Include="Content\Scripts\adapters\standalone-framework.js" />
     <Content Include="Content\Scripts\adapters\standalone-framework.src.js" />
@@ -129,7 +132,7 @@
     <Content Include="Content\Scripts\themes\sand-signika.js" />
     <Content Include="Content\Scripts\themes\skies.js" />
     <Content Include="Content\Styles\bootstrap-slider.min.css" />
-    <Content Include="index2.html" />
+    <Content Include="index.html" />
     <Content Include="repairs.html" />
     <Content Include="reviewAccident.html" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
@@ -145,7 +148,7 @@
     <Content Include="Content\Styles\style.css" />
     <Content Include="accidents.html" />
     <Content Include="Global.asax" />
-    <Content Include="Index.html" />
+    <Content Include="Index1.html" />
     <Content Include="Content\Scripts\handlebars.min.js" />
     <Content Include="fieldService.html" />
     <Content Include="ordersStatus.html" />
