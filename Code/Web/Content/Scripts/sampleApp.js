@@ -57,6 +57,11 @@ function OnclickOrderNow(code) {
     window.location.href = "/ordersStatus.html?view=orderStatus&number=" + code;
    
 }
+
+function OnclickSubmit() {
+    window.location.href = "/reviewAccident.html?view=reviewAccident";
+
+}
 function DisplayEnginesTemplate(data) {
     
 
@@ -196,6 +201,10 @@ function DisplayRepairs() {
 
     var currentRepair = [_.first(repairsData.repairs)];
 
+    var first = _.first(mainData.engines);
+    var engineData = { engines: [first] };
+    DisplayEnginesTemplate(engineData);
+
     $.each(currentRepair, function (index, repair) {
         var engine = GetEngineByCode(repair.engineCode);
         repair.name = engine.name;
@@ -204,10 +213,7 @@ function DisplayRepairs() {
 
 
     });
-
-
-    var filteredJson = { repairs: currentRepair };
-    DisplayEnginesTemplate(filteredJson);
+    var filteredJson = { repairs: currentRepair };  
 
 
     var updates = { updates: currentRepair[0].updates };
@@ -226,13 +232,20 @@ function DisplayRepairs() {
     $('#SummaryContainer').append(html);
     var stageFounded = false;
     $.each(repairStagesData.stages, function (index, stage) {
-        if (stage.name == currentRepair[0].stage)
-            stageFounded = true;
+        //if (stage.name == currentRepair[0].stage)
+        //    stageFounded = true;
 
-        if (!stageFounded || stage.name == currentRepair[0].stage)        
-            stage.class = " label-primary ";        
+        if (stage.code == currentRepair[0].stage)
+            stage.class = " label-primary ";
         else
             stage.class = " label-default ";
+        //if (stage.name == currentRepair[0].stage)
+        //    stageFounded = true;
+
+        //if (!stageFounded || stage.name == currentRepair[0].stage)        
+        //    stage.class = " label-primary ";        
+        //else
+        //    stage.class = " label-default ";
     });
 
     var source = $("#stage-template").html();

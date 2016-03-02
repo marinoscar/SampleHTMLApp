@@ -30,11 +30,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/Index.html">Home</a>
+                    <a class="navbar-brand" href="/Index2.html">Home</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/FieldService.html?view=fieldService">Field Service Rep</a></li>
+                        <li><a href="/Index.html">Order Tracking</a></li>
+                        <li><a href="/FieldService.html?view=fieldService">Field Service App</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidents<b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -42,12 +43,7 @@
                                 <li class="kopie"><a href="/reviewAccident.html?view=reviewAccident">Incident Review</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repairs<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li class="kopie"><a href="/repairs.html?view=repairs">My Repairs</a></li>                                
-                            </ul>                           
-                        </li>
+                        <li class="kopie"><a href="/repairs.html?view=repairs">Repairs</a></li>
                     </ul>
                 </div>
             </nav>
@@ -86,41 +82,41 @@
                     </div>
                     <div class="row">-->
 
-                        <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>
-                        <div class="col-sm-12 col-lg-12">
-                            <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">ASSSESSMENT</div>
-                            <br />
-                        </div>
-                        <div class="col-sm-12 col-lg-12">
-                            <div class="row">
-                                <div class="col-sm-1 col-lg-1">
-                                    <img src="http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg" class="engine-picture-sm img-responsive " alt="engine">
-                                    <br />
-                                </div>
-                                <div class="col-sm-2 col-lg-2">
-                                    <div> The P&W V2500-A1 engine has been deemed fine to operate. Customer’s AOG situation can now be lifted.</div>
-                                    <br />
-                                </div>
+                    <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>
+                    <div class="col-sm-12 col-lg-12">
+                        <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">ASSSESSMENT</div>
+                        <br />
+                    </div>
+                    <div class="col-sm-12 col-lg-12">
+                        <div class="row">
+                            <div class="col-sm-1 col-lg-1">
+                                <img src="http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg" class="engine-picture-sm img-responsive " alt="engine">
+                                <br />
+                            </div>
+                            <div class="col-sm-2 col-lg-2">
+                                <div> The P&W V2500-A1 engine has been deemed fine to operate. Customer’s AOG situation can now be lifted.</div>
+                                <br />
+                            </div>
 
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <span class="text-bold-md-title text-nowrap text-capitalize">P&W TECHNICIAN: </span><span class=" text-nowrap text-capitalize">Pete Mitchell</span>
-                                    <br />
-                                    <span class="text-bold-sm-title text-nowrap">DATE: </span> <span class=" text-nowrap">03/01/2016</span>
-                                    <br />
-                                    <span class="text-bold-sm-title text-nowrap">FINAL STATUS: PASS: </span> <span class=" text-nowrap">PASS</span>
-                                    <br />
-                                </div>                                
-                            </div>
-                            <br />
                         </div>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <span class="text-bold-sm-title text-nowrap text-capitalize">P&W TECHNICIAN: </span><span class=" text-nowrap text-capitalize">Pete Mitchell</span>
+                                <br />
+                                <span class="text-bold-sm-title text-nowrap">DATE: </span> <span class=" text-nowrap">03/01/2016</span>
+                                <br />
+                                <span class="text-bold-sm-title text-nowrap">FINAL STATUS:</span> <span class=" text-nowrap">PASS</span>
+                                <br />
+                            </div>
+                        </div>
+                        <br />
                     </div>
                 </div>
             </div>
-
-
         </div>
+
+
+    </div>
     </div>
 
     <link href="Content/Styles/bootstrap.min.css" rel="stylesheet" />
@@ -152,13 +148,17 @@
             <div class="col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
-                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
-                <br />
                 <ul>
-                    <li>Total block hours</li>
-                    <li>Total flight hours</li>
-                    <li>Last overhaul date</li>
-                    <li>Modification status</li>
+                    <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
+                    {{#each features}}
+                    <li><em>{{name}}</em></li>
+                    {{/each}}
+                    {{#if OtherSpecifications.length}}
+                    <li><span class="text-bold-sm-title text-nowrap">Other Specifications:</span></li>
+                    {{#each OtherSpecifications}}
+                    <li><em>{{name}}</em></li>
+                    {{/each}}
+                    {{/if}}
                 </ul>
             </div>
             <br />

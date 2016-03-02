@@ -30,11 +30,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/Index.html">Home</a>
+                    <a class="navbar-brand" href="/Index2.html">Home</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/FieldService.html?view=fieldService">Field Service Rep</a></li>
+                        <li><a href="/Index.html">Order Tracking</a></li>
+                        <li><a href="/FieldService.html?view=fieldService">Field Service App</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidents<b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -42,12 +43,7 @@
                                 <li class="kopie"><a href="/reviewAccident.html?view=reviewAccident">Incident Review</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repairs<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li class="kopie"><a href="/repairs.html?view=repairs">My Repairs</a></li>
-                            </ul>
-                        </li>
+                        <li class="kopie"><a href="/repairs.html?view=repairs">Repairs</a></li>
                     </ul>
                 </div>
             </nav>
@@ -57,7 +53,7 @@
         <div class="container ">
             <div class="row">
                 <div class="col-sm-12">
-                    <h4><span>MY REPAIRS</span></h4>
+                    <h4><span>REPAIRS</span></h4>
                 </div>
             </div>
             <div class="row">
@@ -126,32 +122,39 @@
     
 
     <script id="engines-template" type="text/x-handlebars-template">
-        {{#each repairs}}
+        
+        {{#each engines}}
+
         <div class="row">
             <div class="col-lg-6" style="padding-bottom:15px">
-                <span class="text-bold-title">My Pratt & Whitney Engine & Parts – {{name}}</span>
-                
+
+                <span class="text-bold-title">Pratt & Whitney Engine & Parts – {{name}}</span>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 text-center ">
-                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
+                <img src="{{picture}}" class="engine-picture img-responsive "   alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
-                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
-                <br />
-
                 <ul>
+                    <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
                     {{#each features}}
-                    <li>{{name}}</li>
+                    <li><em>{{name}}</em></li>
                     {{/each}}
+                    {{#if OtherSpecifications.length}}
+                    <li><span class="text-bold-sm-title text-nowrap">Other Specifications:</span></li>
+                    {{#each OtherSpecifications}}
+                    <li><em>{{name}}</em></li>
+                    {{/each}}
+                    {{/if}}
                 </ul>
             </div>
             <br />
         </div>
+        
         {{/each}}
     </script>
 

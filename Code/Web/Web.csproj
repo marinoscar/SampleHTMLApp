@@ -129,6 +129,7 @@
     <Content Include="Content\Scripts\themes\sand-signika.js" />
     <Content Include="Content\Scripts\themes\skies.js" />
     <Content Include="Content\Styles\bootstrap-slider.min.css" />
+    <Content Include="index2.html" />
     <Content Include="repairs.html" />
     <Content Include="reviewAccident.html" />
     <Content Include="Content\FontAwesome\css\font-awesome.min.css" />
@@ -174,6 +175,7 @@
     <Content Include="App_Readme\Handlebarsjs_README.md" />
     <Content Include="App_Readme\Handlebarsjs_LICENSE" />
     <None Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Properties\PublishProfiles\pwcsampleapp.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

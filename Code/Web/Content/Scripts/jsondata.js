@@ -62,7 +62,7 @@ var ordersData = {
 var repairsData = {
     repairs: [
         {
-            engineCode: "ENGINE-01", stage: "Cleaning",
+            engineCode: "ENGINE-01", stage: "003",
             features: [
                 { name: "Total block hours" },
                 { name: "Total flight hours" },
@@ -125,25 +125,25 @@ var repairsData = {
 var repairStagesData = {
     stages: [
         {
-            code: "001", name: "Disassembly"            
+            code: "001", name: "1. Disassembly"            
         },
         {
-            code: "002", name: "Cleaning"
+            code: "002", name: "2. Cleaning"
         },
         {
-            code: "003", name: "Material Testing"
+            code: "003", name: "3. Material Testing"
         },
         {
-            code: "004", name: "Inspection"
+            code: "004", name: "4. Inspection"
         },
         {
-            code: "005", name: "Repair"
+            code: "005", name: "5. Repair"
         },
         {
-            code: "006", name: "Assembly"
+            code: "006", name: "6. Assembly"
         },
         {
-            code: "007", name: "Engine Test"
+            code: "007", name: "7. Engine Test"
         }
 
     ]

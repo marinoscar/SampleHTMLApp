@@ -30,11 +30,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/Index.html">Home</a>
+                    <a class="navbar-brand" href="/Index2.html">Home</a>
                 </div>
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/FieldService.html?view=fieldService">Field Service Rep</a></li>
+                        <li><a href="/Index.html">Order Tracking</a></li>
+                        <li><a href="/FieldService.html?view=fieldService">Field Service App</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidents<b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -42,12 +43,7 @@
                                 <li class="kopie"><a href="/reviewAccident.html?view=reviewAccident">Incident Review</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repairs<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li class="kopie"><a href="/repairs.html?view=repairs">My Repairs</a></li>
-                            </ul>
-                        </li>
+                        <li class="kopie"><a href="/repairs.html?view=repairs">Repairs</a></li>
                     </ul>
                 </div>
             </nav>
@@ -57,7 +53,7 @@
         <div class="container ">
             <div class="row">
                 <div class="col-sm-12">
-                    <h4><span>DOCUMENT AN ACCIDENT</span></h4>
+                    <h4><span>DOCUMENT AN INCIDENT</span></h4>
                 </div>
             </div>
             <div class="row">
@@ -71,10 +67,10 @@
                         </div>
                         <div class="col-sm-12 col-lg-12">
                             <div class="row">
-                                <div class="col-sm-1 col-lg-1">
+                                <div class="col-md-3 col-lg-1">
                                     <div class="text-bold-sm-title text-nowrap">Incident Type:</div>
                                 </div>
-                                <div class="dropdown col-sm-2 col-lg-2">
+                                <div class="dropdown col-md-3 col-lg-2">
                                     <button class="btn btn-default dropdown-toggle"  type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                         Type
                                         <span class="caret"></span>
@@ -123,7 +119,7 @@
                                 
                             </div>
                             <br />
-                            <button type="button" class="btn btn-primary pull-right ">SUBMIT</button>
+                            <button type="button" onclick="OnclickSubmit()" class="btn btn-primary pull-right ">SUBMIT</button>
                         </div>
 
 
@@ -137,7 +133,7 @@
     </div>
 
     <link href="Content/Styles/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/Styles/fileinput.min.css" rel="stylesheet" />
+    
     <link href="Content/FontAwesome/css/font-awesome.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-fileinput/css/fileinput.min.css" rel="stylesheet" />
     <link href="Content/Styles/style.css" rel="stylesheet" />
@@ -158,7 +154,7 @@
         <div class="row">
             <div class="col-lg-6" style="padding-bottom:15px">
 
-                <span class="text-bold-title">MY P&W ENGINE</span>
+                <span class="text-bold-title">P&W ENGINE</span>
             </div>
         </div>
         <div class="row">
@@ -169,21 +165,16 @@
             <div class="col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
-                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
-                <br />
                 <ul>
+                    <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
                     {{#each features}}
-                    <li>{{name}}</li>
+                    <li><em>{{name}}</em></li>
                     {{/each}}
                     {{#if OtherSpecifications.length}}
-                    <li>
-                        Other Specifications
-                        <ul>
-                            {{#each OtherSpecifications}}
-                            <li>{{name}}</li>
-                            {{/each}}
-                        </ul>
-                    </li>
+                    <li><span class="text-bold-sm-title text-nowrap">Other Specifications:</span></li>
+                    {{#each OtherSpecifications}}
+                    <li><em>{{name}}</em></li>
+                    {{/each}}
                     {{/if}}
                 </ul>
             </div>
