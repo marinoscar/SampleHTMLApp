@@ -1,7 +1,12 @@
 ﻿var selectedEngine ;
 $(function () {
    
-
+    //$("#ex19").slider({
+    //    ticks: [0, 100, 200, 300, 400],
+    //    ticks_labels: ["Order Placed", "On Backorder", "In Progress", "Shipped", "Delivered"],
+    //    ticks_snap_bounds: 50,
+    //    value: 200
+    //});
     var currentView=GetParameterByName('view');
     switch (currentView) {
         case 'index':
@@ -25,17 +30,12 @@ $(function () {
             DisplayReviewAccident();
             break;
         case 'repairs':
-            DisplayReviewAccident();
+            DisplayRepairs();
             break;
         default:
             DisplayEnginesTemplate(mainData)
             break;
     }
-
-   
-   
-
-
 });
 
 function GetParameterByName (name) {
@@ -83,7 +83,12 @@ function GetEngineNameByCode(code) {
     return currentEngine[0].name;
 
 }
+function GetEngineByCode(code) {
+    var currentEngine = _.where(mainData.engines, { code: code });
 
+    return currentEngine[0];
+
+}
 function GetPartByCode(engineCode, partCode) {
     var currentEngine = _.where(mainData.engines, { code: engineCode });
     var currentPart = _.where(currentEngine[0].parts, { code: partCode });
@@ -184,3 +189,57 @@ function DisplayReviewAccident() {
 
 
 }
+
+
+function DisplayRepairs() {
+
+    var currentRepair = [_.first(repairsData.repairs)];
+
+    $.each(currentRepair, function (index, repair) {
+        var engine = GetEngineByCode(repair.engineCode);
+        repair.name = engine.name;
+        repair.picture = engine.picture;
+        repair.code = engine.code;  
+
+
+    });
+
+
+    var filteredJson = { repairs: currentRepair };
+    DisplayEnginesTemplate(filteredJson);
+
+
+    var updates = { updates: currentRepair[0].updates };
+    var source = $("#updates-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(updates);
+
+    $('#UpdatesContainer').empty();
+    $('#UpdatesContainer').append(html);
+
+    var source = $("#sumary-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(filteredJson);
+
+    $('#SummaryContainer').empty();
+    $('#SummaryContainer').append(html);
+    var stageFounded = false;
+    $.each(repairStagesData.stages, function (index, stage) {
+        if (stage.name == currentRepair[0].stage)
+            stageFounded = true;
+
+        if (!stageFounded || stage.name == currentRepair[0].stage)        
+            stage.class = " label-primary ";        
+        else
+            stage.class = " label-default ";
+    });
+
+    var source = $("#stage-template").html();
+    var template = Handlebars.compile(source);
+    var html = template(repairStagesData);
+
+    $('#StageContainer').empty();
+    $('#StageContainer').append(html);
+
+}
+

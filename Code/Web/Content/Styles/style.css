@@ -197,3 +197,47 @@
     text-align:center;
     font-weight:bold;
 }
+
+.stage-box{
+    width:auto;
+    height:25px;
+    border:solid 1px darkgray;
+    /*display: table-cell;
+    vertical-align: middle;
+    text-align:center;*/
+    font-weight:bold;
+    
+}
+
+.stage-text{
+    display: inline;
+    padding: 8px;
+    font-size: 85%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+  
+}
+.slider.slider-horizontal {
+    width: 380px;
+    height: 20px;
+}
+.slider.slider-horizontal .slider-track
+{
+     height: 20px;
+}
+
+.slider-handle,  .slider-tick{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.slider-tick-label-container
+{
+    margin-top: 30px; 
+}

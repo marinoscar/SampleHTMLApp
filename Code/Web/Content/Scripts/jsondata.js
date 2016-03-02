@@ -85,3 +85,93 @@ var ordersData = {
         },
     ]
 };
+
+var repairsData = {
+    repairs: [
+        {
+            engineCode: "ENGINE-01", stage: "Cleaning",
+            features: [
+                { name: "Total block hours" },
+                { name: "Total flight hours" },
+                { name: "Last overhaul date" },
+                { name: "Modification status" }
+            ],
+            summary: [
+                {
+                    picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg",
+                    details: [{ detail: "Engineering complete" }, { detail: "Subcontractor delays" }]
+                }],
+            updates: [
+                    { date: "01/12/16", update: "Tear down complete", picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg" },
+                    { date: "01/15/16", update: "final work scope confirmed", picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg" },
+                    { date: "01/20/16", update: "Subcontractor delay", picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg" }
+                ]
+        },
+        {
+            engineCode: "ENGINE-02", stage: "Inspection",
+            features: [
+                { name: "Total block hours" },
+                { name: "Total flight hours" },
+                { name: "Last overhaul date" },
+                { name: "Modification status" }
+            ],
+            summary: [
+                {
+                    picture: "http://www.pw.utc.com/Content/GP7200_Engine/img/_GP7200engine.jpg",
+                    details: [{ detail: "Engineering complete" }, { detail: "Subcontractor delays" }]
+                }],
+            updates: [
+                   { date: "01/12/16", update: "Tear down complete", picture: "http://www.pw.utc.com/Content/GP7200_Engine/img/_GP7200engine.jpg" },
+                   { date: "01/15/16", update: "final work scope confirmed", picture: "http://www.pw.utc.com/Content/GP7200_Engine/img/_GP7200engine.jpg" },
+                   { date: "01/20/16", update: "Subcontractor delay", picture: "http://www.pw.utc.com/Content/GP7200_Engine/img/_GP7200engine.jpg" }
+            ]
+        },
+        {
+            engineCode: "ENGINE-03", stage: "Assembly",
+            features: [
+                { name: "Total block hours" },
+                { name: "Total flight hours" },
+                { name: "Last overhaul date" },
+                { name: "Modification status" }
+            ],
+            summary: [
+                {
+                    picture: "http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg",
+                    details: [{ detail: "Engineering complete" }, { detail: "Subcontractor delays" }]
+                }],
+            updates: [
+                   { date: "01/12/16", update: "Tear down complete", picture: "http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg" },
+                   { date: "01/15/16", update: "final work scope confirmed", picture: "http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg" },
+                   { date: "01/20/16", update: "Subcontractor delay", picture: "http://www.pw.utc.com/Content/PW400094_Engine/img/PW4000-94engine.jpg" }
+            ]
+        }
+        
+    ]
+};
+
+var repairStagesData = {
+    stages: [
+        {
+            code: "001", name: "Disassembly"            
+        },
+        {
+            code: "002", name: "Cleaning"
+        },
+        {
+            code: "003", name: "Material Testing"
+        },
+        {
+            code: "004", name: "Inspection"
+        },
+        {
+            code: "005", name: "Repair"
+        },
+        {
+            code: "006", name: "Assembly"
+        },
+        {
+            code: "007", name: "Engine Test"
+        }
+
+    ]
+};

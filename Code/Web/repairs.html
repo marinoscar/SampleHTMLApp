@@ -78,23 +78,40 @@
                     <div class="row">
                         <div class="col-sm-12 col-lg-12">
                             <div class="row">
+                              
                                 <div id="EnginesContainer" class=" col-sm-6 col-lg-6"></div>
                                 <div class="col-sm-6 col-lg-6">
-                                    <div class="text-bold-title">OVERALL ENGINE HEALTH</div>
-                                    <br />
-                                    <div id="VariablesContainer" class="col-sm-12 col-lg-12"></div>
+                                    <div class="row">                                       
+                                        <div id="SummaryContainer" class=" col-sm-6 col-lg-6"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12 col-lg-12">
+                                            <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">REPAIR PROCESS STAGE</div>
+                                            <br />
+                                            <div id="StageContainer" class="col-sm-12 col-lg-12"></div>
+                                            <br />
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
                                     <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">STATUS UPDATES</div>
                                     <br />
-                                </div>
-                                <div class="col-sm-6 col-lg-6">
-                                    <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">BUDGET TRACKING</div>
+                                    <div id="UpdatesContainer" class=" col-sm-6 col-lg-6"></div>
                                     <br />
                                 </div>
-                               
+                                <div class="col-sm-6 col-lg-6">
+                                    <!--<div class="row">-->
+                                    <div id="partsDivision" class="col-sm-12 col-lg-12 panel panel-default panel-heading panel-title page-division">BUDGET TRACKING</div>
+                                    <div id="circleChartContainer" class="col-sm-12 col-lg-12">
+
+                                    </div>
+                                    <!--</div>-->
+
+                                    <br />
+                                </div>
+
                             </div>
                         </div>
 
@@ -108,20 +125,25 @@
 
     <link href="Content/Styles/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/FontAwesome/css/font-awesome.min.css" rel="stylesheet" />
+
     <link href="Content/Styles/style.css" rel="stylesheet" />
 
     <script src="Content/Scripts/jquery.js"></script>
     <script src="Content/Scripts/bootstrap.min.js"></script>
     <script src="Content/Scripts/handlebars.min.js"></script>
     <script src="Content/Scripts/underscore-min.js"></script>
+    <script src="Content/Scripts/highcharts.js"></script>
     <script src="Content/Scripts/jsondata.js"></script>
     <script src="Content/Scripts/sampleApp.js"></script>
+    <script src="Content/Scripts/charts.js"></script>
+    
 
     <script id="engines-template" type="text/x-handlebars-template">
-        {{#each engines}}
+        {{#each repairs}}
         <div class="row">
             <div class="col-lg-6" style="padding-bottom:15px">
                 <span class="text-bold-title">My Pratt & Whitney Engine & Parts – {{name}}</span>
+                
             </div>
         </div>
         <div class="row">
@@ -129,11 +151,12 @@
                 <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
                 <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
                 <br />
+
                 <ul>
                     {{#each features}}
                     <li>{{name}}</li>
@@ -146,25 +169,41 @@
     </script>
 
     <script id="updates-template" type="text/x-handlebars-template">
-        {{#each engines}}
-        <div class="row">
-            <div class="col-lg-6" style="padding-bottom:15px">
-                <span class="text-bold-title">My Pratt & Whitney Engine & Parts – {{name}}</span>
-            </div>
-        </div>
+        {{#each updates}}
+
         <div class="row">
             <div class="col-md-4 text-center ">
-                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
+                <img src="{{picture}}" class="engine-picture-sm img-responsive " alt="engine-update">
                 <br />
             </div>
-            <div class="col-md-2">
-                <span class="text-bold-md-title text-nowrap text-capitalize">Date: </span><span class="text-nowrap ">{{Date}}</span>
+            <div class="col-md-3">
+                <span class="text-bold-md-title text-nowrap text-capitalize">Date: </span><span class="text-nowrap ">{{date}}</span>
                 <br />
-                <span class="text-bold-md-title text-nowrap text-capitalize">Status Updates: </span><span class="text-nowrap ">{{Date}}</span>
+                <span class="text-bold-md-title text-nowrap text-capitalize">Status Updates: </span><span class="text-nowrap ">{{update}}</span>
+                <br />
+
+            </div>
+            <br />
+        </div>
+        {{/each}}
+    </script>
+
+    <script id="sumary-template" type="text/x-handlebars-template">
+        {{#each repairs}}
+
+        <div class="row">
+            <div class="col-md-4 text-center ">
+                <img src="{{picture}}" class="engine-picture-sm img-responsive " alt="engine-update">
+                <br />
+            </div>
+            <div class="col-md-6">
+                <span class="text-bold-title text-nowrap">Overall Status Summary</span>
                 <br />
                 <ul>
-                    {{#each features}}
-                    <li>{{name}}</li>
+                    {{#each summary}}
+                    {{#each details}}
+                    <li>{{detail}}</li>
+                    {{/each}}
                     {{/each}}
                 </ul>
             </div>
@@ -172,7 +211,12 @@
         </div>
         {{/each}}
     </script>
-
-    
+    <script id="stage-template" type="text/x-handlebars-template">
+        {{#each stages}}
+        <div style="display:inline-block;padding:8px 3px 8px 3px;">
+            <span class="label {{class}} stage-text">{{name}}</span>
+        </div>
+        {{/each}}
+    </script>
 </body>
 </html>
