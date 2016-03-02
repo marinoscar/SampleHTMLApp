@@ -129,7 +129,7 @@
                 <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
                 <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
@@ -138,6 +138,16 @@
                     {{#each features}}
                     <li>{{name}}</li>
                     {{/each}}
+                    {{#if OtherSpecifications.length}}
+                    <li>
+                        Other Specifications
+                        <ul>
+                            {{#each OtherSpecifications}}
+                            <li>{{name}}</li>
+                            {{/each}}
+                        </ul>
+                    </li>
+                    {{/if}}
                 </ul>
             </div>
             <br />

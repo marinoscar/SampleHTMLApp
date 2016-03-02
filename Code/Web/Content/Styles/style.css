@@ -154,12 +154,12 @@
 .engine-picture{
      height: 180px;
     width: 280px;
+    padding-bottom: 10px;
 }
 
 .engine-picture-md{
     height: 150px;
     width: 150px;
-   
 }
 
 .text-bold-title{
