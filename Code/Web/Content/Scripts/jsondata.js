@@ -11,8 +11,8 @@
                 { name: "Vibration Sensor Data", target: 200, score: 200, rating: 85}
             ],
             parts: [
-                { code: "PART-01", name: "Fan Blade", description: "Description", picture: "Content/Images/FanBlade.jpg", },
-                { code: "PART-02", name: "Compresor Blade", description: "Description", picture: "Content/Images/blade.jpg" }
+                { code: "PART-01", name: "Fan Blade", description: "Description", price:"52369", picture: "Content/Images/FanBlade.jpg", },
+                { code: "PART-02", name: "Compressor Blade", description: "Description", price: "47695", picture: "Content/Images/blade.jpg" }
             ],
             history: [
                 { code: "Detail-01", detail: "3/16: Engine Overhaul", picture: "http://www.pw.utc.com/Content/V2500_Engine/img/V2500engine.jpg", },
@@ -29,8 +29,8 @@
                 { name: "Vibration Sensor Data", target: 200, score: 200, rating: 85 }
             ],
             parts: [
-                { code: "PART-01", name: "Part Name", description: "part description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" },
-                { code: "PART-02", name: "Part Name", description: "part description", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" }
+                { code: "PART-01", name: "Part Name", description: "part description", price:"52369", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" },
+                { code: "PART-02", name: "Part Name", description: "part description", price:"52369", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" }
             ],
             history: [
                 { code: "Detail-01", detail: "MY P&W ENGINE", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg", },
