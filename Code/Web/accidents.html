@@ -60,39 +60,49 @@
                 <div class="container-fluid card-box">
                     <div class="row">
 
-                        <div id="EnginesContainer" class=" col-sm-6 col-lg-6"></div>                       
+                        <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>                       
                         <div class="col-sm-12 col-lg-12">
+                            <br />
                             <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">INCIDENT DETAILS</div>
                             <br />
                         </div>
                         <div class="col-sm-12 col-lg-12">
                             <div class="row">
-                                <div class="col-sm-1 col-lg-1">
-                                    <div class="text-bold-sm-title text-nowrap">Incident Type:</div>
+                                <div class="col-sm-2 col-md-1">
+                                    <div class="text-bold-sm-title text-nowrap label-input">Incident Type:</div>
                                 </div>
-                                <div class="dropdown col-sm-2 col-lg-2">
-                                    <select class="form-control" style="width:305px">
+                                <div class="dropdown col-sm-2 col-md-2">
+                                    <select class="form-control" style="width:400px">
                                         <option value="Bird strike">Bird strike</option>
                                         <option value="Foreign object ingested (runway debris)">Foreign object ingested (runway debris)</option>
                                         <option value="Compressor surge">Compressor surge</option>
                                         <option value="Low oil pressure">Low oil pressure</option>
                                         <option value="High oil pressure">High oil pressure</option>
                                         <option value="Excessive engine vibrations">Excessive engine vibrations</option>
-                                    </select>                                   
+                                    </select>
                                     <br />
                                 </div>
                                 
                             </div>
-                            <br />
+                            <br />                            
                             <div class="row">
-                                <div class="col-sm-1 col-lg-1">
-                                    <div class="text-bold-sm-title text-nowrap">Incident Location:</div>
+                                <div class="col-sm-2 col-md-1">
+                                    <div class="text-bold-sm-title text-nowrap label-input">Incident Location: </div>
                                 </div>
-                                <div class="dropdown col-sm-2 col-lg-2">
-                                    <input type="text" class="form-control" style="width:305px" placeholder="Location" aria-describedby="basic-addon1">
+                                <div class="dropdown col-sm-2 col-md-2">
+                                    <input type="text" class="form-control" style="width:400px" placeholder="Location" aria-describedby="basic-addon1">
                                     <br />
                                 </div>
-                               
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-2 col-md-1">
+                                    <div class="text-bold-sm-title text-nowrap label-input">Incident Result:</div>
+                                </div>
+                                <div class="dropdown col-sm-2 col-md-2">
+                                    <textarea class="form-control"  style="width:400px; height:100px" placeholder="Result" aria-describedby="basic-addon1"></textarea>                                    
+                                    <br />
+                                </div>
+
                             </div>
                         </div>
                         <div class="col-sm-12 col-lg-12">
@@ -158,11 +168,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 text-center ">
-                <img  src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
+            <div class="col-sm-7 col-md-2">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-5">
+            <div class="col-sm-5 col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
                 <ul>

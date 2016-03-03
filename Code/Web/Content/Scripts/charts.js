@@ -15,7 +15,7 @@ function createCircleChart()
                 enabled: false
             },
             title: {
-                text: 'Spending',
+                text: '',
                 align: 'center',
                 verticalAlign: 'middle',
              

@@ -59,8 +59,10 @@
             <div class="row">
                 <div class="container-fluid card-box">
                     <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>
+                    <br />
                     <div class="col-sm-12 col-lg-12">
-                        <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">PARTS & SERVICES </div>
+                        <br />
+                        <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division"></div>
                         <br />
                     </div>
                     <div id="OrdersContainer" class="col-sm-12 col-lg-12"></div>
@@ -104,11 +106,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 text-center ">
-                <img src="{{picture}}" class="engine-picture img-responsive "   alt="engine-{{code}}">
+            <div class="col-sm-7 col-md-2">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-5">
+            <div class="col-sm-5 col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
                 <ul>
@@ -144,12 +146,12 @@
         <div class="col-sm-12 col-lg-12">
             <div class="row">
                 {{#each parts}}
-                <div class="col-lg-2" style="padding-bottom:15px">
+                <div class="col-sm-6 col-md-2" style="padding-bottom:15px">
                     <div class="text-bold-sm-title text-center text-nowrap">{{name}}</div>
                     <img src="{{picture}}" class="engine-picture-md img-responsive center-block" alt="part-{{code}}">
                     <div class="text-center">#{{code}} </div>
-                    <br />                    
-                    <div class="text-center">Price:<span class="text-bold-sm-title">${{price}}</span> </div>                                    
+                             
+                    <div class="text-center">Price: <span class="text-bold-sm-title">${{price}}</span> </div>                                    
                     <div class="text-center">{{description}}</div>
                     <br />
                     <button type="button" class="btn btn-primary center-block">Add to Cart</button>

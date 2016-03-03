@@ -62,10 +62,10 @@
                         <div class="col-sm-12 col-lg-12">
                             <div class="row">
                               
-                                <div id="EnginesContainer" class=" col-sm-6 col-lg-6"></div>
+                                <div id="EnginesContainer" class=" col-sm-6 col-md-6"></div>
                                 <div class="col-sm-6 col-lg-6">
                                     <div class="row">                                       
-                                        <div id="SummaryContainer" class=" col-sm-6 col-lg-6"></div>
+                                        <div id="SummaryContainer" class=" col-sm-12 col-md-12"></div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12 col-lg-12">
@@ -79,6 +79,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6 col-lg-6">
+                                    <br />
                                     <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">STATUS UPDATES</div>
                                     <br />
                                     <div id="UpdatesContainer" class=" col-sm-6 col-lg-6"></div>
@@ -86,7 +87,9 @@
                                 </div>
                                 <div class="col-sm-6 col-lg-6">
                                     <!--<div class="row">-->
+                                    <br />
                                     <div id="partsDivision" class="col-sm-12 col-lg-12 panel panel-default panel-heading panel-title page-division">BUDGET TRACKING</div>
+                                    
                                     <div id="circleChartContainer" class="col-sm-12 col-lg-12">
 
                                     </div>
@@ -132,11 +135,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 text-center ">
-                <img src="{{picture}}" class="engine-picture img-responsive "   alt="engine-{{code}}">
+            <div class="col-sm-7 col-md-4">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>
-            <div class="col-md-5">
+            <div class="col-sm-5 col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
                 <ul>
@@ -162,11 +165,11 @@
         {{#each updates}}
 
         <div class="row">
-            <div class="col-md-4 text-center ">
-                <img src="{{picture}}" class="engine-picture-sm img-responsive " alt="engine-update">
+            <div class="col-sm-8 col-md-6">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-update">
                 <br />
             </div>
-            <div class="col-md-3">
+            <div class="col-sm-4 col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">Date: </span><span class="text-nowrap ">{{date}}</span>
                 <br />
                 <span class="text-bold-md-title text-nowrap text-capitalize">Status Updates: </span><span class="text-nowrap ">{{update}}</span>
@@ -182,14 +185,14 @@
         {{#each repairs}}
 
         <div class="row">
-            <div class="col-md-4 text-center ">
-                <img src="{{picture}}" class="engine-picture-sm img-responsive " alt="engine-update">
+            <div class="col-sm-5 col-md-3">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-update">
                 <br />
             </div>
-            <div class="col-md-8">
+            <div class="col-sm-6 col-md-6">
                 <span class="text-bold-title text-nowrap">Overall Status Summary</span>
                 <br />
-                <ul >
+                <ul>
                     {{#each summary}}
                     {{#each details}}
                     <li>{{detail}}</li>

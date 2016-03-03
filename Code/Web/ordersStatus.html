@@ -108,6 +108,7 @@
         </div>-->
 
                         </div>
+                    <br />
                     <div id="PartsContainer" class=" col-sm-12 col-lg-12"></div>
 
                 </div>
@@ -142,19 +143,19 @@
         </div>
         {{#each parts}}
         <div class="row">
-            <div class="col-md-2  ">
+            <div class="col-sm-4 col-md-2" >
                 <div class="text-bold-sm-title  text-nowrap">{{name}}</div>
                 <img src="{{picture}}" class="engine-picture img-responsive " alt="part-{{code}}">
-                <div class="text-center">{{description}}</div>
+                <div class="text-center" >{{description}}</div>
                 <br />
             </div>
-            <div class="col-md-2 ">
+            <div class="col-sm-5 col-md-5">
                 <br />
-                <span class="text-bold-sm-title text-nowrap text-capitalize">STATUS: </span><span class="text-nowrap ">{{status}}</span>
+                <span class="text-bold-sm-title text-nowrap text-capitalize">Status: </span><span class="text-nowrap ">{{status}}</span>
                 <br />
-                <span class="text-bold-sm-title text-nowrap text-capitalize">ESTIMATED DELIVERY DATE: </span><span class="text-nowrap">{{deliveryDate}}</span>
+                <span class="text-bold-sm-title text-nowrap text-capitalize">Estimated Delivery Date: </span><span class="text-nowrap">{{deliveryDate}}</span>
                 <br />
-                <span class="text-bold-sm-title text-nowrap text-capitalize">LOCATION: </span><span class="text-nowrap">{{location}}</span>
+                <span class="text-bold-sm-title text-nowrap text-capitalize">Location: </span><span class="text-nowrap">{{location}}</span>
                 <br />
             </div>
             <br />
