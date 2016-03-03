@@ -1,6 +1,9 @@
 ﻿var selectedEngine ;
 $(function () {
-   
+   // $('#foo').slider()
+   //.on('slide', function (ev) {
+   //    $('#bar').val(ev.value);
+   //});
     //$("#ex19").slider({
     //    ticks: [0, 100, 200, 300, 400],
     //    ticks_labels: ["Order Placed", "On Backorder", "In Progress", "Shipped", "Delivered"],
@@ -17,6 +20,18 @@ $(function () {
             DisplayOrders(currentOrder);
             break;
         case 'orderStatus':
+            // $('#foo').slider()
+            //.on('slide', function (ev) {
+            //    $('#bar').val(ev.value);
+            //});
+            $("#ex19").slider({
+                ticks: [0, 100, 200, 300, 400],
+                ticks_labels: ["Ordered", "On Backorder", "In Progress", "Shipped", "Delivered"],
+                ticks_snap_bounds: 50,
+                value: 200,
+               
+               enabled:false
+            });
             var orderNumber = GetParameterByName('number');
             DisplayOrderStatus(orderNumber);
             break;
@@ -238,7 +253,7 @@ function DisplayRepairs() {
         if (stage.code == currentRepair[0].stage)
             stage.class = " label-primary ";
         else
-            stage.class = " label-default ";
+            stage.class = " stage-text-bg ";
         //if (stage.name == currentRepair[0].stage)
         //    stageFounded = true;
 

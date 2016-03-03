@@ -75,14 +75,18 @@
                         <div class="col-sm-12 col-lg-12">
                             <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">RECOMMENDEDED NEXT STEPS / KEY MILESTONES</div>
                             <br />
-                            <div>XXX</div>
+                            <div>
+                                <ul>
+                                    <li>Investigate outstanding service bulletins</li>
+                                    <li>Bench-test sensors</li>
+                                    <li>Reference EMM section x, page yy</li>
+                                </ul>
+                            </div>
                             <br />
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
@@ -143,12 +147,21 @@
 
         {{#each history}}
         <div class="row">
-            <div class="col-md-3 text-center ">
+            <div class="col-md-4 text-center ">
                 <img src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
-
+                <br />
             </div>
-            <div class="col-md-1">
-                <span class="text-bold-sm-title text-nowrap text-capitalize">{{detail}}</span>
+            <div class="col-md-5">
+                <span class="text-bold-sm-title text-nowrap text-capitalize">Date of Data: 21 April 2014</span>                
+                <table class="col-md-6" style="width:320px">
+                    {{#each details}}
+                    <tr>
+                        <td>{{code}}</td>
+                        <td>{{value}}</td>
+                        <td>{{description}}</td>
+                    </tr>
+                    {{/each}}
+                </table>
                 <br />
             </div>
             <br />
@@ -163,29 +176,36 @@
         {{#each engines}}
         <table class="table">
             <tr>
-                <td></td>
-                <td class="text-bold-title text-center">Your Ratings</td>
+                <td class=" col-sm-2 col-md-2 text-bold-title "></td>
+                <td class=" text-bold-title text-center">Your Ratings</td>
                 <!--<td class="text-bold-title text-center">P&W STANDARD</td>
                 <td class="text-bold-title text-center">RATING</td>-->
             </tr>
             {{#each variables}}
             <tr>
-                <td class="col-md-3 text-bold-title ">{{name}}</td>
-                <td class="text-center">
-                    <div class="col-md-12" style="padding-bottom:15px">
-                        <div class="progress">
+                <td class=" col-sm-2 col-md-2 "><span class="text-bold-md-title  text-nowrap">{{name}}</span>  </td>
+                <td class=" text-center">
+                    <div  >
+                        <div id="ratingControl" class="progress">
                             <div class="progress-bar progress-bar-success" style="width: 33.3%">
-                                
-                            </div>
-                            <div class="progress-bar progress-bar-warning " style="width: 33.3%">
+                                {{#if low}}
+                                    <div class="slider.slider-disabled slider-handle rating-value " style="left: {{position}}%;"></div>
+                                {{/if}}
                                
                             </div>
-                            <div class="progress-bar progress-bar-danger" style="width: 33.3%">                                
+                            <div class="progress-bar progress-bar-warning " style="width: 33.3%">
+                                {{#if medium}}
+                                <div class="slider.slider-disabled slider-handle rating-value " style="left: {{position}}%;"></div>
+                                {{/if}}
                             </div>
-                           
-                        </div>
+                            <div class="progress-bar progress-bar-danger" style="width: 33.3%">
+                                {{#if high}}
+                                <div class="slider.slider-disabled slider-handle rating-value " style="left: {{position}}%;"></div>
+                                {{/if}}
+                            </div>
 
-                    </div>
+                        </div>
+                    </div> 
                 </td>
                 <!--<td class="text-center">{{target}}</td>
                 <td>

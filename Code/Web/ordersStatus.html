@@ -68,41 +68,46 @@
                     <div class="row">
                         <div class="col-lg-6" style="padding-bottom:15px">
                             <div id="OrderNumber" class="text-bold-title"></div>
-                            <br />
+                            
                         </div>
                     </div>
                     <div class="row">
-                        <!--<input id="ex19" type="text" style="width:500px"
-                               data-provide="slider"
-                               data-slider-ticks="[1, 2, 3]"
-                               data-slider-ticks-labels='["short", "medium", "long"]'
-                               data-slider-min="1"
-                               data-slider-max="3"
-                               data-slider-step="1"
-                               data-slider-value="3"
-                               data-slider-tooltip="hide" />-->
-                        <div class="col-lg-6" style="padding-bottom:15px">
-                            <div class="progress">
-                                <div class="progress-bar " style="width: 10%">
-                                    <span>Order Placed</span>
-                                </div>
-                                <div class="progress-bar progress-bar-info " style="width: 20%">
-                                    <span>On Backorder</span>
-                                </div>
-                                <div class="progress-bar progress-bar-danger" style="width: 35%">
-                                    <span>In Progress</span>
-                                </div>
-                                <div class="progress-bar progress-bar-warning" style="width: 15%">
-                                    <span>Shipped</span>
-                                </div>
-                                <div class="progress-bar progress-bar-success" style="width: 20%">
-                                    <span>Delivered</span>
-                                </div>
-                            </div>
+                        <!--<input type="text" id="foo"  value="" data-slider-min="1" data-slider-max="5" data-slider-step="1" data-slider-value="-14" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="hide">
+                        <hr>
+                        <input type="text" id="bar">-->
+                        <div class="col-md-6" style="padding-bottom:15px; padding-left:45px">
+                            <input id="ex19" type="text" style="width:550px" data-slider-id='ex1Slider'
+                                   data-provide="slider"
+                                   data-slider-ticks="[1, 2, 3]"
+                                   data-slider-ticks-labels='["short", "medium", "long"]'
+                                   data-slider-min="1"
+                                   data-slider-max="3"
+                                   data-slider-step="1"
+                                   data-slider-value="3"
+                                   data-slider-tooltip="hide" />
+                        </div>
+                            <!--<div class="col-lg-6" style="padding-bottom:15px">
+            <div class="progress">
+                <div class="progress-bar " style="width: 10%">
+                    <span>Order Placed</span>
+                </div>
+                <div class="progress-bar progress-bar-info " style="width: 20%">
+                    <span>On Backorder</span>
+                </div>
+                <div class="progress-bar progress-bar-danger" style="width: 35%">
+                    <span>In Progress</span>
+                </div>
+                <div class="progress-bar progress-bar-warning" style="width: 15%">
+                    <span>Shipped</span>
+                </div>
+                <div class="progress-bar progress-bar-success" style="width: 20%">
+                    <span>Delivered</span>
+                </div>
+            </div>
+
+        </div>-->
 
                         </div>
-
-                    </div>
                     <div id="PartsContainer" class=" col-sm-12 col-lg-12"></div>
 
                 </div>
@@ -137,13 +142,14 @@
         </div>
         {{#each parts}}
         <div class="row">
-            <div class="col-md-1  ">
+            <div class="col-md-2  ">
                 <div class="text-bold-sm-title  text-nowrap">{{name}}</div>
-                <img src="{{picture}}" class="engine-picture-sm img-responsive " alt="part-{{code}}">
+                <img src="{{picture}}" class="engine-picture img-responsive " alt="part-{{code}}">
                 <div class="text-center">{{description}}</div>
                 <br />
             </div>
             <div class="col-md-2 ">
+                <br />
                 <span class="text-bold-sm-title text-nowrap text-capitalize">STATUS: </span><span class="text-nowrap ">{{status}}</span>
                 <br />
                 <span class="text-bold-sm-title text-nowrap text-capitalize">ESTIMATED DELIVERY DATE: </span><span class="text-nowrap">{{deliveryDate}}</span>

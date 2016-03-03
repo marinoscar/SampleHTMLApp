@@ -60,7 +60,7 @@
                 <div class="container-fluid card-box">
                     <div class="row">
 
-                        <div id="EnginesContainer" class=" col-sm-12 col-lg-12"></div>
+                        <div id="EnginesContainer" class=" col-sm-6 col-lg-6"></div>                       
                         <div class="col-sm-12 col-lg-12">
                             <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">INCIDENT DETAILS</div>
                             <br />
@@ -71,7 +71,14 @@
                                     <div class="text-bold-sm-title text-nowrap">Incident Type:</div>
                                 </div>
                                 <div class="dropdown col-sm-2 col-lg-2">
-                                    <input type="text" class="form-control" placeholder="Type" aria-describedby="basic-addon1">
+                                    <select class="form-control" style="width:305px">
+                                        <option value="Bird strike">Bird strike</option>
+                                        <option value="Foreign object ingested (runway debris)">Foreign object ingested (runway debris)</option>
+                                        <option value="Compressor surge">Compressor surge</option>
+                                        <option value="Low oil pressure">Low oil pressure</option>
+                                        <option value="High oil pressure">High oil pressure</option>
+                                        <option value="Excessive engine vibrations">Excessive engine vibrations</option>
+                                    </select>                                   
                                     <br />
                                 </div>
                                 
@@ -82,7 +89,7 @@
                                     <div class="text-bold-sm-title text-nowrap">Incident Location:</div>
                                 </div>
                                 <div class="dropdown col-sm-2 col-lg-2">
-                                    <input type="text" class="form-control" placeholder="Location" aria-describedby="basic-addon1">
+                                    <input type="text" class="form-control" style="width:305px" placeholder="Location" aria-describedby="basic-addon1">
                                     <br />
                                 </div>
                                
@@ -151,7 +158,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-2 text-center ">
+            <div class="col-md-4 text-center ">
                 <img  src="{{picture}}" class="engine-picture img-responsive " alt="engine-{{code}}">
                 <br />
             </div>

@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class=" col-sm-12 col-lg-12">
+                <div class=" col-sm-12 col-md-12">
                     <div class="container-fluid card-box">
                         <div id="EnginesContainer">
 
@@ -88,12 +88,12 @@
             {{#each engines}}
 
             <div class="row">
-                <div class="col-lg-6" style="padding-bottom:15px">
+                <div class="col-md-6" style="padding-bottom:15px">
                     <span class="text-bold-title">Pratt & Whitney Engine & Parts – {{name}}</span>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-md-2">
                     <a onclick="OnclickEngine('{{code}}')"><img src="{{picture}}" class="engine-picture text-center " alt="engine-{{code}}"></a>
                     <button type="button" onclick="OnclickEngine('{{code}}')" class="btn btn-primary btn-block center-block">Buy Parts</button>
                     <br />
@@ -117,7 +117,8 @@
                 </div>
 
             </div>
-
+            <br />
+                  
             {{/each}}
         
     </script>
