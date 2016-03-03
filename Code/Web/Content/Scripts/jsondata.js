@@ -19,8 +19,8 @@
                 { name: "Vibration Sensor Data", target: 200, score: 200, rating: 85, high: true, position: "5" }
             ],
             parts: [
-                { code: "PART-01", name: "Fan Blade", description: "", price: "150,0000", picture: "Content/Images/FanBlade.jpg", },
-                { code: "PART-02", name: "Compressor Blade", description: "", price: "100,0000", picture: "Content/Images/blade.jpg" }
+                { code: "PART-01", name: "Fan Blade", description: "", price: "150,0000", picture: "Content/Images/FanBlade.jpg", trackingStep:200 },
+                { code: "PART-02", name: "Compressor Blade", description: "", price: "100,0000", picture: "Content/Images/blade.jpg", trackingStep: 100 }
             ],
             history: [
                 {
@@ -51,8 +51,8 @@
                 { name: "Vibration Sensor Data", target: 200, score: 200, rating: 85 }
             ],
             parts: [
-                { code: "PART-01", name: "Part Name", description: "", price: "150,0000", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" },
-                { code: "PART-02", name: "Part Name", description: "", price: "100,0000", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg" }
+                { code: "PART-01", name: "Part Name", description: "", price: "150,0000", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg", trackingStep: 200 },
+                { code: "PART-02", name: "Part Name", description: "", price: "100,0000", picture: "http://preview.turbosquid.com/Preview/2014/07/09__07_03_36/Part2226.jpgf5b4600e-6765-44ee-8324-886d34d5162fLarge.jpg", trackingStep: 200 }
             ],
             history: [
                 {

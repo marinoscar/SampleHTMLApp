@@ -207,7 +207,7 @@
     <script id="stage-template" type="text/x-handlebars-template">
         {{#each stages}}
         <div style="display:inline-block;padding:8px 3px 8px 3px;">
-            <span class="label {{class}} stage-text">{{name}}</span>
+            <span class="label {{class}} stage-text">{{name}}<span class="{{icon}} " style="{{iconPadding}}" aria-hidden="true"></span></span>
         </div>
         {{/each}}
     </script>

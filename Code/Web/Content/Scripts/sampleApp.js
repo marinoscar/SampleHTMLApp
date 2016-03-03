@@ -28,16 +28,10 @@ $(function () {
             //.on('slide', function (ev) {
             //    $('#bar').val(ev.value);
             //});
-            $("#ex19").slider({
-                ticks: [0, 100, 200, 300, 400],
-                ticks_labels: ["Ordered", "On Backorder", "In Progress", "Shipped", "Delivered"],
-                ticks_snap_bounds: 50,
-                value: 200,
-               
-               enabled:false
-            });
+            
             var orderNumber = GetParameterByName('number');
             DisplayOrderStatus(orderNumber);
+            
             break;
         case 'fieldService':
             DisplayHistory();
@@ -141,15 +135,35 @@ function DisplayOrderStatus(number) {
             part.name = currentPart.name;
             part.picture = currentPart.picture;
             part.description = currentPart.description;
-
-        });
-       
+        });      
 
     });
     
     
     var filteredJson = { orders: currentOrder };
     DisplayOrderStatusTemplate(filteredJson);
+    $.each(currentOrder, function (index, order) {
+        var engineName = GetEngineNameByCode(order.engineCode);
+        order.engineName = engineName;
+        $.each(order.parts, function (index, part) {
+            var currentPart = GetPartByCode(order.engineCode, part.code);
+            //part.name = currentPart.name;
+            //part.picture = currentPart.picture;
+            //part.description = currentPart.description;
+
+            $("#part" + part.code).slider({
+                ticks: [0, 100, 200, 300, 400],
+                ticks_labels: ["Ordered", "On Backorder", "In Progress", "Shipped", "Delivered"],
+                ticks_snap_bounds: 50,
+                value: currentPart.trackingStep,
+                enabled: false
+            });
+        });
+
+    });
+
+
+   
 
 }
 
@@ -251,20 +265,27 @@ function DisplayRepairs() {
     $('#SummaryContainer').append(html);
     var stageFounded = false;
     $.each(repairStagesData.stages, function (index, stage) {
-        //if (stage.name == currentRepair[0].stage)
-        //    stageFounded = true;
+        if (stage.name == currentRepair[0].stage)
+            stageFounded = true;
 
+        //if (stage.code == currentRepair[0].stage)
+        //    stage.class = " label-primary ";
+        //else
+        //    stage.class = " stage-text-bg ";
         if (stage.code == currentRepair[0].stage)
-            stage.class = " label-primary ";
+            stageFounded = true;
+
+        if (!stageFounded && stage.code != currentRepair[0].stage)
+        {
+            stage.class = " stage-text-bg-progress";
+            stage.icon = " glyphicon glyphicon glyphicon-ok ";
+            stage.iconPadding = " padding-left:5px";
+        }
+
+        else if (stageFounded && stage.code == currentRepair[0].stage)
+            stage.class = " label-primary  ";
         else
             stage.class = " stage-text-bg ";
-        //if (stage.name == currentRepair[0].stage)
-        //    stageFounded = true;
-
-        //if (!stageFounded || stage.name == currentRepair[0].stage)        
-        //    stage.class = " label-primary ";        
-        //else
-        //    stage.class = " label-default ";
     });
 
     var source = $("#stage-template").html();

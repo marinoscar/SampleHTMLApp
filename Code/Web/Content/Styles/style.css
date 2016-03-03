@@ -135,12 +135,18 @@
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: .25em;
-    width:130px;
+    width:150px;
   
 }
 .stage-text-bg{
        color:black;
-        background-color: darkgrey;
+       background-color: darkgrey;
+  
+}
+.stage-text-bg-progress{
+       color:#696969;
+        background-color: #d3d3d3;
+
   
 }
 .slider.slider-horizontal {
@@ -259,3 +265,6 @@
     padding-top:8px;
     
 }
+
+.orderTracking
+{}
