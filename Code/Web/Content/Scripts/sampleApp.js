@@ -274,14 +274,15 @@ function DisplayRepairs() {
         //    stage.class = " stage-text-bg ";
         if (stage.code == currentRepair[0].stage)
             stageFounded = true;
-
+        stage.icon = " glyphicon glyphicon glyphicon-none";
+        stage.iconPadding = " padding-left:5px";
         if (!stageFounded && stage.code != currentRepair[0].stage)
         {
             stage.class = " stage-text-bg-progress";
             stage.icon = " glyphicon glyphicon glyphicon-ok ";
             stage.iconPadding = " padding-left:5px";
         }
-
+       
         else if (stageFounded && stage.code == currentRepair[0].stage)
             stage.class = " label-primary  ";
         else

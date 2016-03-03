@@ -141,6 +141,7 @@
 .stage-text-bg{
        color:black;
        background-color: darkgrey;
+         
   
 }
 .stage-text-bg-progress{
@@ -268,3 +269,8 @@
 
 .orderTracking
 {}
+
+.glyphicon-none:before {
+    content: "\e013";
+    color: transparent !important;
+}
