@@ -1,4 +1,7 @@
-﻿var selectedEngine ;
+﻿var selectedEngine;
+var incidentType;
+var incidentLocation;
+var incidentResult;
 $(function () {
    // $('#foo').slider()
    //.on('slide', function (ev) {
@@ -10,6 +13,7 @@ $(function () {
     //    ticks_snap_bounds: 50,
     //    value: 200
     //});
+   
     var currentView=GetParameterByName('view');
     switch (currentView) {
         case 'index':
@@ -48,7 +52,7 @@ $(function () {
             DisplayRepairs();
             break;
         default:
-            DisplayEnginesTemplate(mainData)
+            DisplayEnginesTemplate(mainData);
             break;
     }
 });

@@ -9,6 +9,8 @@
 
     <script src="Content/Scripts/jquery.js"></script>
     <script src="Content/Scripts/bootstrap.min.js"></script>
+    <script src="Content/Scripts/handlebars.min.js"></script>
+    <script src="Content/Scripts/jsondata.js"></script>
     <script src="Content/Scripts/sampleApp.js"></script>
 
 </head>
@@ -45,7 +47,7 @@
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="/Index1.html">Order Tracking</a></li>
-                        <li><a href="/FieldService.html?view=fieldService">Field Service App</a></li>
+                        <li><a  href="/FieldService.html?view=fieldService">Field Service App</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Incidents<b class="caret"></b></a>
                             <ul class="dropdown-menu">
@@ -99,7 +101,45 @@
     </div>
 
 
+    <script id="engines-template" type="text/x-handlebars-template">
 
+        {{#each engines}}
+
+        <div class="row">
+            <div class="col-md-6" style="padding-bottom:15px">
+                <span class="text-bold-title">Pratt & Whitney Engine & Parts – {{name}}</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-7 col-md-2">
+                <a onclick="OnclickEngine('{{code}}')"><img src="{{picture}}" class="engine-picture text-center " alt="engine-{{code}}"></a>
+                <button type="button" onclick="OnclickEngine('{{code}}')" class="btn btn-primary btn-block center-block">Buy Parts</button>
+                <br />
+                <br />
+            </div>
+            <div class="col-sm-5 col-md-5">
+                <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
+                <br />
+                <ul>
+                    <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
+                    {{#each features}}
+                    <li><em>{{name}}</em></li>
+                    {{/each}}
+                    {{#if OtherSpecifications.length}}
+                    <li><span class="text-bold-sm-title text-nowrap">Other Specifications:</span></li>
+                    {{#each OtherSpecifications}}
+                    <li><em>{{name}}</em></li>
+                    {{/each}}
+                    {{/if}}
+                </ul>
+            </div>
+
+        </div>
+        <br />
+
+        {{/each}}
+
+    </script>
 
 </body>
 </html>
