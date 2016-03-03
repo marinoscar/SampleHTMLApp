@@ -79,7 +79,7 @@
                                 <ul>
                                     <li>Investigate outstanding service bulletins</li>
                                     <li>Bench-test sensors</li>
-                                    <li>Reference EMM section x, page yy</li>
+                                    <li>Reference EMM section 2.1, page.20</li>
                                 </ul>
                             </div>
                             <br />
@@ -119,8 +119,8 @@
             <div class="col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
+                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
                 <ul>
-                    <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
                     {{#each features}}
                     <li><em>{{name}}</em></li>
                     {{/each}}
@@ -156,8 +156,8 @@
                 <table class="col-md-6" style="width:320px">
                     {{#each details}}
                     <tr>
-                        <td>{{code}}</td>
-                        <td>{{value}}</td>
+                        <td style="width:40px">{{code}}</td>
+                        <td class="pull-right " style="padding-right:25px">{{value}}</td>
                         <td>{{description}}</td>
                     </tr>
                     {{/each}}
@@ -183,7 +183,7 @@
             </tr>
             {{#each variables}}
             <tr>
-                <td class=" col-sm-2 col-md-2 "><span class="text-bold-md-title  text-nowrap">{{name}}</span>  </td>
+                <td class=" col-sm-2 col-md-2 "><span class="text-bold-md-title  text-nowrap"  {{#if high}}style="font-weight:800" {{/if}}>{{name}}</span>  </td>
                 <td class=" text-center">
                     <div  >
                         <div id="ratingControl" class="progress">

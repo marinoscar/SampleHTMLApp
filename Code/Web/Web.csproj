@@ -91,7 +91,9 @@
     <Content Include="Content\Images\FanBlade.jpg" />
     <Content Include="Content\Images\fv.PNG" />
     <Content Include="Content\Images\PW400.jpg" />
+    <Content Include="Content\Images\PW4000-compressor2.jpg" />
     <Content Include="Content\Images\sv.PNG" />
+    <Content Include="Content\Images\v2500-compressor2.jpg" />
     <Content Include="Content\Scripts\adapters\standalone-framework.js" />
     <Content Include="Content\Scripts\adapters\standalone-framework.src.js" />
     <Content Include="Content\Scripts\charts.js" />

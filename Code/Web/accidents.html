@@ -66,10 +66,10 @@
                             <div id="partsDivision" class="panel panel-default panel-heading panel-title page-division">INCIDENT DETAILS</div>
                             <br />
                         </div>
-                        <div class="col-sm-12 col-lg-12">
+                        <div class="col-sm-6 col-lg-6">
                             <div class="row">
                                 <div class="col-sm-2 col-md-1">
-                                    <div class="text-bold-sm-title text-nowrap label-input">Incident Type:</div>
+                                    <div class="text-bold-sm-title text-nowrap label-input">Type:</div>
                                 </div>
                                 <div class="dropdown col-sm-2 col-md-2">
                                     <select class="form-control" style="width:400px">
@@ -87,7 +87,7 @@
                             <br />                            
                             <div class="row">
                                 <div class="col-sm-2 col-md-1">
-                                    <div class="text-bold-sm-title text-nowrap label-input">Incident Location: </div>
+                                    <div class="text-bold-sm-title text-nowrap label-input">Location: </div>
                                 </div>
                                 <div class="dropdown col-sm-2 col-md-2">
                                     <input type="text" class="form-control" style="width:400px" placeholder="Location" aria-describedby="basic-addon1">
@@ -96,7 +96,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-2 col-md-1">
-                                    <div class="text-bold-sm-title text-nowrap label-input">Incident Result:</div>
+                                    <div class="text-bold-sm-title text-nowrap label-input">Result:</div>
                                 </div>
                                 <div class="dropdown col-sm-2 col-md-2">
                                     <textarea class="form-control"  style="width:400px; height:100px" placeholder="Result" aria-describedby="basic-addon1"></textarea>                                    
@@ -175,8 +175,8 @@
             <div class="col-sm-5 col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
+                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
                 <ul>
-                    <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
                     {{#each features}}
                     <li><em>{{name}}</em></li>
                     {{/each}}

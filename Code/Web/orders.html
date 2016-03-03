@@ -113,8 +113,8 @@
             <div class="col-sm-5 col-md-5">
                 <span class="text-bold-md-title text-nowrap text-capitalize">{{name}}</span>
                 <br />
+                <span class="text-bold-sm-title text-nowrap">Key Specifications:</span>
                 <ul>
-                    <li><span class="text-bold-sm-title text-nowrap">Key Specifications:</span></li>
                     {{#each features}}
                     <li><em>{{name}}</em></li>
                     {{/each}}
@@ -151,7 +151,7 @@
                     <img src="{{picture}}" class="engine-picture-md img-responsive center-block" alt="part-{{code}}">
                     <div class="text-center">#{{code}} </div>
                              
-                    <div class="text-center">Price: <span class="text-bold-sm-title">${{price}}</span> </div>                                    
+                    <div class="text-center">Price: ${{price}} </div>                                    
                     <div class="text-center">{{description}}</div>
                     <br />
                     <button type="button" class="btn btn-primary center-block">Add to Cart</button>
