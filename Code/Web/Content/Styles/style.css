@@ -274,3 +274,35 @@
     content: "\e013";
     color: transparent !important;
 }
+
+
+#PART-02-Slider .slider-selection.tick-slider-selection {
+  
+        
+       background-image: -webkit-linear-gradient(top, #e5e500 0%, #e5e500 100%);
+  background-image: -o-linear-gradient(top, #e5e500 0%, #e5e500 100%);
+  background-image: linear-gradient(to bottom, #e5e500 0%, #e5e500 100%);
+}
+
+#PART-02-Slider .slider-tick.in-selection {  
+
+        background-image: -webkit-linear-gradient(top, #cccc00  0%, #cccc00  100%);
+    background-image: -o-linear-gradient(top, #cccc00  0%, #cccc00  100%);
+    background-image: linear-gradient(to bottom, #cccc00  7%, #cccc00  100%);
+
+ 
+
+}
+
+#PART-02-Slider .slider.slider-disabled .slider-handle
+{
+        background-image: -webkit-linear-gradient(top, #cccc00  0%, #cccc00  100%);
+    background-image: -o-linear-gradient(top, #cccc00  0%, #cccc00  100%);
+    background-image: linear-gradient(to bottom, #cccc00  7%, #cccc00  100%);
+}
+
+#PART-02-Slider .slider-handle {
+        background-image: -webkit-linear-gradient(top, #cccc00  0%, #cccc00  100%);
+    background-image: -o-linear-gradient(top, #cccc00  0%, #cccc00  100%);
+    background-image: linear-gradient(to bottom, #cccc00  7%, #cccc00  100%);
+}
